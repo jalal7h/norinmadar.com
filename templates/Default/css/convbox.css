@@ -1,0 +1,14 @@
+
+.convbox {
+	margin: 20px;
+	padding: 20px 50px 20px 50px;
+	border: 1px solid #ccc;
+	background: #eee;
+	color: #000;
+	text-shadow: 1px 1px #fff;
+	font-size: 13px;
+	line-height: 23px !important;
+}
+.convbox a {
+	color: blue !important;
+}

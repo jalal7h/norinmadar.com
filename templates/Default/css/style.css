@@ -1,0 +1,144 @@
+
+fieldset {
+	border-radius: 5px;
+	padding: 10px;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+legend {
+	margin:4px;
+	padding:4px;
+}
+
+label {
+	cursor:pointer;
+}
+
+select,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=submit],
+input[type=reset],
+input[type=button],
+textarea,
+reset {
+	background-color:#ffffff;
+	border:1px solid #cccccc;
+	padding:10px;
+/*	margin-left:8px;*/
+/*	margin-top:2px;*/
+/*	margin-bottom:2px;*/
+	color:#666;
+	width:160px;
+	font-family:BYekan,Tahoma;
+	font-size:12px;
+	outline: 0;
+}
+input[type=submit],
+input[type=reset],
+input[type=button] {
+	cursor:pointer;
+	margin:1px;
+}
+input[type=checkbox] {
+	position:relative;
+	top:3px;
+	left:5px;
+}
+select:hover,
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=password]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+reset:hover,
+textarea:hover,
+input[type=button]:hover {
+	border:1px solid #f0f0f0;
+	background-color:white;
+	color:#000;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url('../images/select-tag-drop-icon.png') no-repeat 7px 50%;
+	padding-left: 28px !important;
+	background-color: white;
+}
+.clear {
+	clear:both;
+	height:1px;
+	width: 80%;
+}
+
+.boxborder {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+.delete_button div {
+	background-image:url('../images/delete-12x12.png');
+	background-repeat:no-repeat;
+	width:12px;
+	height:12px;
+	float:right;
+	margin-left:10px;
+	position:relative;
+	top:8px;
+	cursor:pointer;
+}
+
+.submit_button {
+	display: inline-block !important;
+	background-color: rgb(117, 172, 0) !important;
+	padding: 9px 28px !important;
+	font: normal 15px BYekan !important;
+	color: white !important;
+	border-radius: 3px !important;
+	margin: 3px auto !important;
+	text-decoration: none !important;
+	box-shadow: 0 0 10px #ccc !important;
+	outline: none !important;
+	width: auto !important;
+	text-align: center;
+	cursor: pointer;
+}
+.submit_button:hover {
+	opacity: 0.8;
+}
+
+.divider {
+	clear:both;
+	width:95%;
+	margin:auto;
+	border-bottom:1px dashed #ccc;
+	margin-bottom:20px;
+	height:20px;
+}
+.delimiter {
+	width:99%;
+	height:20px;
+	border-bottom:1px dotted #ccc;
+	margin:auto;
+	margin-bottom:20px !important;
+	clear:both;
+}
+
+.numeric {
+	text-align: center;
+	direction: ltr;
+	width: 160px !important;
+}
+
+.calendar {
+	width:120px !important;
+	text-align:center;
+	direction:ltr;
+}
+
+
+

@@ -1,0 +1,62 @@
+
+
+.back {
+	margin: 0 0 0 10px;
+	font: normal 12px tahoma;
+	color: rgb(76, 147, 199);
+	border-bottom: 1px solid rgb(76, 147, 199);
+	padding: 0 0 4px 0;
+}
+
+.userpanel .desk {
+	display: inline-block;
+	/*border: 1px solid #E8F0FF;*/
+	border-width: 0 1px 0 0;
+	/*height: 400px;*/
+	width: 100%;
+	/*background: red;*/
+	vertical-align: top;
+	padding: 10px;
+}
+
+.userpanel_desk_management {
+	
+}
+.userpanel_desk_management .container {
+	border:1px solid #ccc;
+	display: inline-block;
+	width: 48%;
+	margin: 5px;
+	vertical-align: top;
+}
+.userpanel_desk_management > .container > div {
+	border: 1px solid #fff;
+	background: #eee;
+	padding: 10px;
+	text-align: center;
+	height: 338px;
+}
+.userpanel_desk_management > .container > div > .head {
+	font: bold 18px tahoma;
+	text-shadow: 1px 1px white;
+	text-align: right;
+	margin: 15px 30px 0 0;
+}
+.userpanel_desk_management > .container > div > .text {
+	text-shadow: 1px 1px white;
+	margin: 30px 60px 30px 60px;
+	text-align: justify;
+}
+.userpanel_desk_management > .container > div > input[type=button] {
+	margin: 10px 0px 20px 0;
+}
+
+
+
+
+
+
+
+
+
+

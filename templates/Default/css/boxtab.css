@@ -1,0 +1,22 @@
+
+.boxtab {
+	margin: 0 0 10px 0;
+}
+.boxtab .key {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: #eee;
+	cursor: pointer;
+	padding: 5px 15px 5px 0;
+	text-shadow: 1px 1px white;
+	color: black;
+	font: bold 13px tahoma;
+}
+.boxtab .body {
+	display: none;
+	border: 1px solid #ccc;
+	border-width: 0 1px 1px 1px;
+	border-radius: 0 0 3px 3px;
+	padding: 5px;
+}
+

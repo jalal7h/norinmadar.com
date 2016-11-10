@@ -1,0 +1,28 @@
+
+/*index*/
+
+#main {
+	width:100%;
+	margin:auto;
+	padding:0px;
+	height:100%;
+	border:0px;
+	border-spacing:0;
+	border-collapse:collapse;
+}
+#main_top {
+	width:100%;
+	border-top: 2px solid #000;
+	/*border-bottom: 1px solid #ccc;*/
+	box-shadow: 0 5px 10px #f5f5f5;
+	margin-bottom: 30px;
+}
+#main_center {
+	width:100%;
+}
+#main_down {
+	width:100%;
+}
+
+
+

@@ -1,0 +1,40 @@
+
+.setting_management {
+	text-align: right;
+	padding: 40px 60px;
+	display: block;
+	direction: rtl;
+	width: 100%;
+	font-size: 15px;
+}
+.setting_management div {
+	display: inline-block;
+	width: 48%;
+	margin-bottom: 10px;
+}
+.setting_management div span {
+	width: 120px;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 10px;
+}
+.setting_management div input {
+
+}
+.setting_management div select {
+
+}
+.setting_management div textarea {
+	width: 590px;
+	height: 80px;
+}
+.setting_management .copyright_div {
+	display: block;
+	width: 100%;
+}
+.setting_management .submit_div {
+	margin: 40px auto 10px auto;
+	text-align: center;
+	display: block;
+	width: 100%;
+}

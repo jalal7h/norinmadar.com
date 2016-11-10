@@ -1,0 +1,12 @@
+
+#
+# orders_basket_list();
+RewriteRule ^orders-basket$ ./?page=66 [L]
+RewriteRule ^orders-basket-([0-9]+)$ ./?page=66&do=add&id=$1 [L]
+RewriteRule ^orders-basket-confirm$ ./?page=66&do=confirm [L]
+RewriteRule ^orders_paymentdone-([0-9]+)$ ./?page=66&do=paymentdone&order_id=$1 [L]
+
+#
+# users_login_form();
+RewriteRule ^orders-list$ ./?page=62&do=orders_user_list [L]
+

@@ -1,0 +1,49 @@
+
+.billing_userpanel_payment_offline {
+	margin: 30px auto;
+	position: relative; right: 40px;
+}
+.billing_userpanel_payment_offline h1 {
+	margin: 20px 30px 30px 0;
+}
+.billing_userpanel_payment_offline div {
+	margin: 5px;
+	width: 420px;
+}
+.billing_userpanel_payment_offline div span {
+	text-align: left;
+	width: 140px;
+	display: inline-block;
+}
+.billing_userpanel_payment_offline div input[type=text] {
+	width: 200px;
+}
+.billing_userpanel_payment_offline input[type=submit] {
+	display: block !important;
+	margin: 20px 0 !important;
+}
+
+
+._buposnc {
+	margin: 40px auto;
+	direction: rtl;
+	width: 500px;
+}
+._buposnc span {
+	display: block;
+	font-size: 18px;
+	line-height: 24px !important;
+}
+._buposnc icon:before {
+	display: block;
+	font-family: FontAwesome;
+	content: "\f14a";
+	font-size: 120px;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+

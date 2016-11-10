@@ -1,0 +1,9 @@
+
+.clock {
+    width: 65px;
+    font: normal 15px 'Courier new';
+    text-align: center;
+    direction: ltr;
+    padding: 4px;
+}
+

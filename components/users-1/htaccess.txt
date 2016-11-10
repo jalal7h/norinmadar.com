@@ -1,0 +1,6 @@
+
+RewriteRule ^register$ ./?page=58 [L]
+RewriteRule ^register_do$ ./?page=59 [L]
+RewriteRule ^login$ ./?page=60 [L]
+RewriteRule ^forgot$ ./?page=63 [L]
+

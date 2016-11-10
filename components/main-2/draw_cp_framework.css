@@ -1,0 +1,32 @@
+
+.draw_cp_framework {
+	text-align: right;
+	margin: 0px;
+	padding: 10px 0;
+	background: #eee;
+}
+.draw_cp_framework > a {
+	display: inline-block;
+	width: 172px;
+	height: 180px;
+	color: #444;
+	background: #fff;
+	box-shadow: 0 5px 10px rgba(0,0,0, 0.15);
+	margin: 15px;
+	text-align: right;
+	transition: all 0.2s ;
+
+}
+.draw_cp_framework > a > div.title {
+	margin: 15px 20px 0 20px;
+	font: normal 15px BYekan;
+	border-bottom: 1px dashed #ccc;
+	padding: 0 0 13px 0;
+}
+
+.draw_cp_framework > a:hover {
+	color: #c00;
+	background: #f6f6f6;
+	box-shadow: 0 5px 10px rgba(0,0,0, 0.30);
+
+}

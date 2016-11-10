@@ -1,0 +1,159 @@
+
+.listmaker_list {
+	direction:rtl;
+	width: 100%;
+	margin: auto;
+	margin: 20px 0;
+	/*background-color:#fff;*/
+	padding:0px;
+}
+.listmaker_list_record {
+	cursor:pointer;
+	background-color:white;
+	padding:5px;
+	margin:5px;
+/*	width:100%;*/
+}
+
+.listmaker_list_record td {
+	/*border:1px solid #eee;*/
+	box-shadow: 0 0 10px #D4D4D4;
+	border-left:0px;
+	vertical-align: middle;
+	border-radius: 4px;
+}
+.listmaker_list_record td:last-child {
+	border-left:1px solid #eee;
+/*	text-align:center;*/
+}
+.listmaker_list-no-record-found {
+	direction:rtl;
+	text-align:center;
+	margin: 100px 0;
+}
+.listmaker_list_record:hover {
+	background-color:#ffe;
+}
+.listmaker_list_record_inactive {
+	background-color:#fff4f4;
+}
+.listmaker_list_record td {
+	padding:10px;
+}
+
+.listmaker_list_picture {
+	padding:0px !important;
+}
+.listmaker_list_picture img {
+	margin:0px; 
+	padding:0px;
+	border-radius: 4px;
+}
+
+.listmaker_list_picture .tools-td {
+	text-align: center;
+	background-color: white !important;
+}
+
+.listmaker_list_head {
+	background: -webkit-linear-gradient(#fbfbfb, #fefefe); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fbfbfb, #fefefe); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fbfbfb, #fefefe); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fbfbfb, #fefefe); /* Standard syntax (must be last) */
+}
+.listmaker_list_head th {
+	padding:10px;
+	cursor:default;
+	text-align:center;
+	border-radius: 4px;
+	background-color: #ddd;
+}
+.listmaker_list_head_footer {
+	height: 5px;
+}
+
+
+.listmaker_list_record .linkTo {
+	display: inline-block;
+	background-color: rgb(117, 172, 0);
+	padding: 7px 15px;
+	font: normal 13px BYekan;
+	color: white;
+	border-radius: 3px;
+	margin: 0 0 0 5px;
+	text-decoration: none;
+	box-shadow: 0 0 10px #ccc;
+}
+
+.listmaker_list_record .remove {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+	float: left;
+	margin: 0 3px 0 0;
+	padding: 6px 7px 7px 7px;
+	background-color: #f00;
+	border-radius: 3px;
+	box-shadow: 0 0 10px #D08686;
+	height: 27px;
+	width: 27px;
+	color: white;
+	font: normal 18px 'courier new';
+	text-align: center;
+	line-height: 13px !important;
+}
+.listmaker_list_record .setflag {
+	float:left;
+	/*margin:6px;*/
+}
+.listmaker_list_record .setflag img {
+	width: 27px;
+	height: 27px;
+	margin: 0 3px 0 3px;
+	border-radius: 5px;
+}
+.listmaker_list_record .setflag img:hover {
+	opacity: 0.7;
+}
+
+.listmaker_list_record .linkTo:hover ,
+.listmaker_list_record .remove:hover {
+	opacity: 0.6;
+	text-decoration: none;
+}
+
+
+.paging_select {
+	float:left;
+	text-align:right;
+	direction:rtl;
+	margin:0 0 10px 0;
+}
+.paging_select select {
+	width: auto;
+	margin: 0 1px;
+}
+
+.listmaker_list_search {
+	margin: 10px 0 -5px 0;
+	display: block;
+	text-align: right;
+	direction: rtl;
+}
+.listmaker_list_search input {
+	width: 280px;
+    outline: 0px;
+    border-radius: 3px;
+    margin: 5px;
+    box-shadow: 0 0 10px #ddd;
+    border: 0px;
+}
+.listmaker_list_search input:hover {
+	border: 0px;
+}
+
+
+
+
+
+

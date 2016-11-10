@@ -1,0 +1,10 @@
+
+input[type=file].green {
+	display: none !important;
+	opacity: 0.4;
+}
+div.greenwrapper {
+	display: inline-block;
+}
+
+

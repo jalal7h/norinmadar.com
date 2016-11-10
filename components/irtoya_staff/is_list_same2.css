@@ -1,0 +1,97 @@
+
+.is_list_same2 {
+	margin: 10px -5px !important;
+	width: 100%;
+	clear: both;
+}
+.is_list_same2 > .r {
+	padding: 0px;
+	/*margin: 6px 5px;*/
+	width: 24.8%;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+}
+.is_list_same2 > .r > img.main {
+	display: inline-block;
+	width: 192px;
+    height: 192px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 4px;
+}
+.is_list_same2 > .r div.tiny {
+	position: absolute; left: 10px; top: 10px;
+	/*width: 10px;*/
+	/*text-align: left;*/
+}
+.is_list_same2 > .r div.tiny > img {
+	width: 45px;
+	height: 45px;
+	/*border: 3px solid white;*/
+	/*box-shadow: 0 0 10px #000;*/
+	border-radius: 4px;
+	margin: 0 0 4px 0 !important;
+	display: block;
+}
+.is_list_same2 > a > img {
+	max-width: 100% !important;
+}
+.is_list_same2 > a {
+	height: 250px !important;
+	border: 0px !important; 
+    box-shadow: 0 0 0px #ddd !important;
+    transition: all 0.3s;
+}
+.is_list_same2 > a:hover {
+	background-color: #eee;
+}
+.is_list_same2 > .r .text {
+	position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #eee;
+    padding: 0px 7px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 147px;
+    overflow: hidden;
+    text-align: right;
+    height: 28px;
+    line-height: 28px !important;
+}
+.is_list_same2 > .r .order {
+	position: absolute; bottom: 10px; left: 10px;
+	background-color: #A90000;
+	border-radius: 4px;
+	padding: 8px 12px 6px 12px;
+	color: #FFF0F0;
+	font: bold 14px BYekan;
+	display: block;
+}	
+.is_list_same2 > .r .order:hover {
+	opacity: 0.7;
+}
+
+.listmaker_list_paging {
+	width: 100% !important;
+    margin: 20px auto !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

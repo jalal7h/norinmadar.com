@@ -1,0 +1,57 @@
+
+.listmaker_tabmenu {
+	padding:0px; margin:0px;
+	width:100%;
+	text-align:center;
+	margin:auto;
+}
+.listmaker_tabmenu a {
+	padding:0px;
+	display:inline-block;
+	text-align:center;
+	margin:0px 2px 0px 2px;
+	border:1px solid white;
+	border-top:1px solid #ddd;
+	/** box shadow */
+	box-shadow: 0px 5px 10px 0px #aaa;
+	padding:0 10px 0 10px;
+}
+.listmaker_tabmenu_normal {
+	padding:0px; margin:0px;
+	line-height:23px !important;
+	position:relative;
+	top:-26px;
+	background:#eee;
+	transition: all 0.1s;
+}
+.listmaker_tabmenu_normal:hover {
+	top:-24px;
+	line-height: 27px !important;
+}
+.listmaker_tabmenu_current {
+	padding:0px;
+	margin:0px;
+	line-height:30px !important;
+	position:relative;
+	top:-22px;
+	background:#eee;
+	color: #930000 !important;
+	cursor: default;
+}
+.listmaker_tabmenu_line {
+	width:100%;
+	background:#e8e8e8;
+	height:20px;
+	border:1px solid #ddd;
+}
+.listmaker_tabmenu_down {
+	height:1px;
+	width:100%;
+	background:#ccc;
+	margin:0px 0 00px 0;
+	position:relative;
+	top:-14px;
+	
+}
+
+

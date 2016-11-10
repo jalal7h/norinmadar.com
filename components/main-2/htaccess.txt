@@ -1,0 +1,11 @@
+RewriteRule ^resize/([0-9]+)x([0-9]+)/(.*)$ ./?do_action=quick_resize&width=$1&height=$2&address=$3 [L]
+RewriteRule ^admin$ ./?page=admin [L]
+RewriteRule ^scripts.js$ ./?do_action=include_all_js [L]
+RewriteRule ^scripts-admin.js$ ./?do_action=include_all_js&page=admin [L]
+RewriteRule ^styles.css$ ./?do_action=include_all_css [L]
+RewriteRule ^styles-admin.css$ ./?do_action=include_all_css&page=admin [L]
+RewriteRule ^about$ ./?page=3 [L]
+RewriteRule ^terms$ ./?page=6 [L]
+RewriteRule ^privacy$ ./?page=7 [L]
+RewriteRule ^image\.list/(.*)$ ./?do_action=imgp_echo&filename=$1 [L]
+

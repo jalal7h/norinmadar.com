@@ -1,0 +1,23 @@
+
+.orders_management_list_payment {
+	direction: rtl;
+	display: block;
+	text-align: right;
+	width:400px;
+	margin:50px auto 0 auto;
+}
+.orders_management_list_payment > div {
+	margin:10px;
+}
+.orders_management_list_payment > div > span {
+	width:100px;
+	display: inline-block;
+}
+.orders_management_list_payment select {
+	direction: rtl;
+}
+.orders_management_list_payment input[name=date_paid],
+.orders_management_list_payment input[name=cost] {
+	direction: ltr;
+	text-align: center;
+}

@@ -1,0 +1,44 @@
+
+.billing_management_offline_methods {
+	direction: rtl;
+}
+.billing_management_offline_methods .notfound {
+	margin: 80px auto;
+
+}
+
+.billing_management_offline_methods_form {
+	direction: rtl;
+}
+.billing_management_offline_methods_form {
+	padding: 30px 0 0 0;
+}
+.billing_management_offline_methods_form hr {
+	margin: 30px auto 10px auto;
+	border-color: #ccc;
+	width: 80%;
+}
+.billing_management_offline_methods_form span {
+	width: 80px;
+	display: inline-block;
+	text-align: left;
+}
+.billing_management_offline_methods_form input[type="text"] {
+	margin: 3px;
+	border-radius: 4px;
+	width: 200px;
+	direction: ltr;
+	font-family: monospace,'Courier new',tahoma;
+	font-size: 15px;
+}
+.billing_management_offline_methods_form input[type="text"].numeric {
+	width: 200px !important;
+	text-align: left !important;
+}
+.billing_management_offline_methods_form input[name="c1"] {
+	direction: rtl;
+	font-family: BYekan;
+}
+.billing_management_offline_methods_form input[type="submit"] {
+	margin: 20px !important;
+}

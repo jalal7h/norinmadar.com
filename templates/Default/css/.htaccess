@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^template.css$ ../../../?do_action=include_all_css_template [L]
+RewriteRule ^template-admin.css$ ../../../?do_action=include_all_css_template&page=admin [L]
+

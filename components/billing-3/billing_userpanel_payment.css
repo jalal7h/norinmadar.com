@@ -1,0 +1,112 @@
+
+.billing_userpanel_payment {
+	margin: 0 0 50px 0;
+}
+.billing_userpanel_payment .text {
+	transition: all 0.4s;
+	margin: 25px;
+	font: bold 17px BYekan;
+}
+.billing_userpanel_payment .method_list {
+	display: inline-block;
+	width: 44%;
+	margin: 0 20px 0 0;
+	vertical-align: top;
+}
+.billing_userpanel_payment .method_list h1 {
+	margin: 20px 0 30px 0;
+	font-size: 16px;
+}
+.billing_userpanel_payment .method_list .r {
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+	margin: 0 10px;
+}
+.billing_userpanel_payment .method_list .r > * {
+	vertical-align: middle;
+	display: inline-block;
+}
+.billing_userpanel_payment .method_list .r input {
+	position: relative; top: -13px;
+}
+.billing_userpanel_payment .method_list .r img {
+	height: 40px;
+	position: relative; right: 8px;;
+}
+
+.billing_userpanel_payment .method_list .offline {
+	display: block;
+	width: 100%;
+	position: relative;
+	height: 50px;
+	background-color: #e4e4e4;
+	padding: 10px;
+	margin-bottom: 5px;
+	vertical-align: middle;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-right: 0px !important;
+	color: #777;
+	transition: all 0.3s;
+}
+.billing_userpanel_payment .method_list .offline:hover {
+	background-color: #ddd;
+	color: #000;
+}
+.billing_userpanel_payment .method_list .offline .c1 {
+	position: absolute; right: 30px; top: 17px;
+	direction: rtl;
+}
+.billing_userpanel_payment .method_list .offline .c-container {
+	display: inline-block;
+	position: absolute; left: 14px; top: 14px;
+}
+.billing_userpanel_payment .method_list .offline span {
+	display: block;
+}
+.billing_userpanel_payment .method_list .offline .c1 {
+	font: bold 16px BYekan;
+}
+.billing_userpanel_payment .method_list .offline input {
+	top: 7px;
+}
+
+.billing_userpanel_payment .cost-container {
+	display: inline-block;
+	width: 50%;
+	margin: 0 20px 0 0;
+}
+.billing_userpanel_payment .cost-container span {
+	margin: 0 20px 0 0;
+	display: inline-block;
+	font: normal 14px BYekan;
+}
+.billing_userpanel_payment .cost-container input[type=text] {
+	margin: 0 20px 0 0;
+	direction: ltr;
+	font-size: 18px;
+	padding: 5px 15px 5px 15px;
+}
+.billing_userpanel_payment .cost-container .convbox {
+
+}
+.billing_userpanel_payment .cost-container input[type=submit] {
+	display: inline-block;
+	background-color: rgb(117, 172, 0);
+	padding: 7px 15px;
+	font: normal 13px BYekan;
+	color: white;
+	border-radius: 3px;
+	margin: 3px 20px 3px 3px; 
+	text-decoration: none;
+	box-shadow: 0 0 10px #ccc;
+	line-height: 24px !important;
+}
+.billing_userpanel_payment .wallet_credit {
+	margin: 7px 24px 0 0;
+	display: block;
+}
+
+
+

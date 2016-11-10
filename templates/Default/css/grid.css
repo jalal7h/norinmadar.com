@@ -1,0 +1,56 @@
+
+/*index*/
+
+.grid2 {
+	display:inline-block;
+	width:45%;
+}
+.grid3 {
+	display:inline-block;
+	width:31%;
+	padding-right:5px;
+	margin:5px;
+	vertical-align:top;
+}
+.grid4 {
+	display:inline-block;
+	width:24%;
+}
+.grid5 {
+	display:inline-block;
+	width:19%;
+}
+
+.grid-container {
+	line-height:16px !important;
+	font-size:11px tahoma;
+	color:#555;
+	text-shadow:1px 1px #fff;
+	text-align:justify;
+	padding-left:10px;
+	cursor:default;
+}
+.grid-container a {
+	display:block;
+	line-height:16px !important;
+	font-size:11px;
+	color:#555;
+	text-shadow:1px 1px #fff;
+	height:18px;
+	overflow:hidden;
+	text-align:right;
+	cursor:pointer;
+}
+.grid-container a:hover {
+	color:#000;
+}
+.grid-container a:before {
+	content:":: ";
+	color:#999;
+}
+
+
+
+
+
+

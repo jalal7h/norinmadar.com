@@ -1,0 +1,41 @@
+
+.orders_basket_addbutton span {
+	padding: 12px 15px 0px 0px !important;
+}
+.orders_basket_list table tr th:nth-child(1) ,
+.orders_basket_list table tr td:nth-child(1) {
+	display: none;
+}
+
+.orders_management_viewitem table tr th:nth-child(1) ,
+.orders_management_viewitem table tr td:nth-child(1) {
+	display: none;
+}
+/*.orders_management_viewitem > center > div.convgreen {
+	display: none;
+}*/
+
+.orders_user_list_detail table tr th:nth-child(1) ,
+.orders_user_list_detail table tr td:nth-child(1) {
+	display: none;
+}
+.orders_user_list_detail {
+	margin-top: 20px !important;
+}
+
+.userpanel_desk_container {
+	margin-right: -200px;
+	padding-right: 200px;
+	display: inline-block; 
+	width: 100%;
+	vertical-align: top;
+}
+.userpanel_menu {
+	margin: 20px 0 0 20px;
+	display: inline-block !important;
+	width: 180px !important;
+	vertical-align: top;
+}
+
+
+

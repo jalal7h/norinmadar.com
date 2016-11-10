@@ -1,0 +1,2 @@
+RewriteRule ^news$ ./?page=51 [L]
+RewriteRule ^news-([0-9]+)-(.*).html$ ./?page=52&id=$1 [L]

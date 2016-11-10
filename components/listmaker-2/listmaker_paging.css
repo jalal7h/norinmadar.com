@@ -1,0 +1,32 @@
+
+.listmaker_list_paging {
+	/*padding-top:15px;*/
+	padding-right:20px;
+	padding-bottom:15px;
+	width:95%;
+	margin:auto;
+	text-align:right;
+	direction:rtl;
+}
+.listmaker_list_paging * {
+	padding:5px 8px;
+	text-decoration: none;
+	font: bold 14px 'courier new';
+	line-height: 24px !important;
+}
+.listmaker_list_paging a {
+	color:#555;
+	background-color:#ddd;
+	text-decoration: none;
+}
+.listmaker_list_paging a:hover {
+	text-decoration: none;
+	opacity: 0.8;
+	color:#555;
+}
+.listmaker_list_paging b {
+	color: white;
+	background-color: #555;
+	pointer: default;
+}
+

@@ -1,0 +1,17 @@
+
+<div class="news_display boxborder">
+	<div class="date" >تاریخ انتشار:‌ {date}</div>
+	<div class="visit" >تعداد بازدید:‌ {visit}</div>
+	<div class="text">
+		<img src="{pic}" class="main" />
+		{text}
+	</div>
+	{tag}
+</div>
+
+{comments}
+
+<script>
+	$(".news_display").parent().parent().find('.blockhead').html('{name}');
+</script>
+

@@ -1,0 +1,32 @@
+
+.listmaker_clicktab {
+
+}
+.listmaker_clicktab > .r {
+	border: 1px solid #ddd;
+	background-color: white;
+	box-shadow: 0 0 10px #ddd;
+	margin-bottom: 15px;
+	border-radius: 4px;
+}
+.listmaker_clicktab > .r > .name {
+	background-color: #f2f2f2;
+	padding: 15px 15px 13px;
+	color: #444;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.2s;
+	border-radius: 4px;
+}
+.listmaker_clicktab > .r > .name:hover {
+	background-color: #F06305;
+	color: white;
+}
+.listmaker_clicktab > .r > .text {
+	padding: 20px;
+	font-size: 13px;
+	text-align: justify;
+	line-height: 25px !important;
+	color: #444;
+	display: none;
+}

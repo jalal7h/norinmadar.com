@@ -1,0 +1,14 @@
+
+.social_sharebuttons {
+	
+}
+.social_sharebuttons span {
+	padding: 8px 3px 0 4px;
+	vertical-align: top;
+	display: inline-block;
+}
+.social_sharebuttons a {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+}

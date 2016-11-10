@@ -1,0 +1,30 @@
+
+.cm_form {
+	display: block;
+	max-width: 95%;
+	margin: 0 auto;
+	clear: both;
+}
+.cm_form > * {
+	margin: 8px;
+	padding: 10px !important;
+	font: normal 14px BYekan,tahoma !important;
+	width: 300px !important;
+	border-radius: 4px;
+}
+.cm_form input[name="name"] {
+	display: block;
+}
+.cm_form input[name="email"] {
+	display: block;
+}
+.cm_form textarea {
+	display: block;
+	height: 120px;
+}
+.cm_form input[type="submit"] {
+	display: block;
+	margin: 8px;
+	box-shadow: 0 0 25px #eee inset;
+	width: 90px !important;
+}

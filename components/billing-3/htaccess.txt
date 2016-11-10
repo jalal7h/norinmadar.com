@@ -1,0 +1,4 @@
+# /*-spi-*/
+RewriteRule ^billing-payment([0-9]+)$ ./?page=14&do=billing_userpanel_payment&order_id=$1 [L]
+
+

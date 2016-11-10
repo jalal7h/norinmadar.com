@@ -1,0 +1,41 @@
+
+.news_list {
+	padding: 0 0 40px 0;
+}
+.news_list .r {
+	text-decoration: none;
+	display: block;
+	clear: both;
+	padding: 15px 15px 10px 15px;
+}
+.news_list .r * {
+	line-height: 20px !important;
+}
+.news_list .r img {
+	float: right;
+	width: 200px;
+	height: 112px;
+	margin: 0 0 0 10px;
+}
+.news_list .r .name {
+	font: bold 16px BYekan,tahoma;
+	/*margin: 0 0 10px 0;*/
+}
+.news_list .r .date {
+	margin: 0 0 5px 0;
+	direction: ltr;
+	text-align: right;
+}
+.news_list .r .text {
+	height: 40px;
+	overflow: hidden;
+}
+.news_list .r .tag {
+
+}
+
+.news_list .r .visit {
+	float: left;
+}
+
+

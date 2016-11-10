@@ -1,0 +1,87 @@
+
+/*index*/
+
+.orders_basket_list {
+	display: block;
+	text-align: left;
+	margin: 0 20px 20px 20px;
+}
+.orders_basket_list table {
+	text-align: right;
+	width: 100%;
+	border-radius: 5px;
+}
+.orders_basket_list table th ,
+.orders_basket_list table td {
+	padding: 14px;
+	border: 1px solid #ddd;
+}
+.orders_basket_list table th {
+	background-color: #f4f4f4;
+	text-align: center;
+	font: bold 13px BYekan,tahoma;
+}
+.orders_basket_list table td {
+	background-color: white;
+	text-align: center;
+	font: normal 17px BYekan, tahoma;
+	vertical-align: middle;
+}
+.orders_basket_list table td:nth-child(1) {
+	padding: 0px;
+	height: 50px;
+	width: 70px;
+}
+.orders_basket_list table td:nth-child(1) img {
+	margin: 10px 0 10px 0;
+	padding: 0px;
+}
+.orders_basket_list table td:nth-child(2) {
+	text-align: right;
+	font: normal 13px BYekan,tahoma;
+}
+.orders_basket_list table td select {
+	width: 60px;
+}
+.orders_basket_list .confirm-button {
+	display: inline-block;
+	/*float: left;*/
+	height: 48px;
+	width: 220px;
+	background-repeat: no-repeat;
+	margin: 20px 0 20px 0;
+}
+.orders_basket_list .confirm-button:nth-child(1){
+	margin-top: 0;
+}
+.orders_basket_list .confirm-button:hover {
+	background-position: 0 -58px;
+}
+
+.orders_basket_list a.delete {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+.orders_basket_list a.delete:hover {
+	background-position: 0 -42px;
+}
+.orders_basket_list .path {
+	border: 1px dashed #ccc;
+	border-width: 1px 0 1px 0;
+	margin: 40px 0 20px 0;
+	padding: 20px 0;
+}
+.orders_basket_list .path input {
+	font: normal 18px BYekan, tahoma;
+	padding: 10px 12px;
+}
+.orders_basket_list .path input.address {
+	width: 70%;
+}
+.orders_basket_list .path input.tell {
+	width: 29%;
+	direction: ltr;
+	margin-right: 5px;
+}

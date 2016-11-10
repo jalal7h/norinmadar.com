@@ -1,0 +1,87 @@
+
+.is_display {
+	display: inline-block;
+	position: relative;
+	margin-left: -270px;
+	padding-left: 270px;
+	margin-top: 30px;
+	width: 100%;
+}
+.is_display .pics {
+	display: inline-block;
+	width: 38%;
+}
+.is_display .pics img.main {
+	width: 100%;
+	border-radius: 5px;
+	vertical-align: top;
+}
+.is_display .pics .tiny {
+	margin: 7px -2px 7px -1px;
+}
+.is_display .pics .tiny img {
+	border-radius: 4px;
+	height: 73px;
+	width: 73px;
+	margin: 0 2px;
+}
+.is_display .text {
+	width: 58%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 40px 0 -40px;
+	padding-left: 40px;
+}
+.is_display .text > div ,
+.is_display .text > div > span {
+	font-size: 15px;
+	line-height: 46px !important;
+}
+.is_display .text > div {
+	border-bottom: 1px dashed #eee;
+}
+.is_display .text > div > span {
+	color: #888;
+	display: inline-block;
+	margin-left: 10px;
+}
+.is_display .text > form {
+
+}
+.is_display .text > form select {
+	width: 80px;
+	margin-left: 10px;
+}
+.is_display .desc {
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	padding: 5px 20px 15px 20px;
+	font-size: 15px;
+	line-height: 22px !important;
+	margin-top: 10px;
+}
+.is_display .desc > div {
+	color: #888;
+	font-size: 15px;
+	line-height: 36px !important;
+}
+.orders_basket_addbutton {
+	width: auto !important;
+	padding: 12px 25px 7px 25px !important;
+	background-color: #A90000 !important;
+	display: inline-block !important;
+	position: relative !important;
+}
+.orders_basket_addbutton:hover {
+	opacity: 0.8 !important;
+}
+
+
+
+
+
+
+
+
+
+

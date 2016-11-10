@@ -1,0 +1,23 @@
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 70px;
+    background-color: #CCCCCC;
+    padding: 5px 10px;
+    font: normal 11px tahoma;
+	-moz-appearance: normal !important; /* Firefox */
+	-webkit-appearance: normal !important; /* Safari and Chrome */
+	appearance: normal !important;
+	background-image: url();
+	text-align: center;
+}
+.ui-datepicker select.ui-datepicker-month option ,
+.ui-datepicker select.ui-datepicker-year option {
+	text-align: center;
+}
+
+.calendar {
+	font: normal 15px 'Courier New';
+	text-align: center;
+	direction: ltr;
+}

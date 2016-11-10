@@ -1,0 +1,89 @@
+
+.userpanel_menu {
+	display: block;
+	direction: rtl;
+	background-color: white;
+	width: 100%;
+	border: 1px solid #eee;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+.userpanel_menu > a {
+	position: relative;
+	display: block;
+    color: #404040;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 38px !important;
+    height: 38px;
+    border-bottom: 1px solid #ededed;
+    border-right: 3px solid gray;
+    transition: all 0.3s;
+}
+.userpanel_menu > a:last-child {
+	border-bottom: 0px;
+}
+.userpanel_menu > a:hover {
+	color: white;
+	background-color: #A90000;
+	border-right-color: #A90000;
+}
+
+.userpanel_menu > a > icon:before {
+	text-align: center;
+	background-color: #ededed;
+	width: 38px;
+	height: 38px;
+	line-height: 38px !important;
+	display: inline-block;
+    font: normal 20px FontAwesome;
+    padding: 0;
+    margin: 0 0 0 10px !important;
+    border-left: 1px solid #ededed;
+    transition: all 0.3s;
+}
+.userpanel_menu > a:nth-child(1) icon:before {
+	content: "\f00b";
+}
+.userpanel_menu > a:nth-child(2) icon:before {
+	content: "\f0d6";
+}
+.userpanel_menu > a:nth-child(3) icon:before {
+	content: "\f0ca";
+}
+.userpanel_menu > a:nth-child(4) icon:before {
+	content: "\f007";
+}
+.userpanel_menu > a:nth-child(5) icon:before {
+	content: "\f084";
+}
+.userpanel_menu > a:nth-child(6) icon:before {
+	content: "\f08b";
+}
+.userpanel_menu > a:hover icon:before {
+	background-color: black;
+}
+
+.userpanel_menu > a > span {
+	position: absolute; top: 13px; right: 47px;
+}
+
+.userpanel_menu > a.current {
+	/*box-shadow: 0 0 40px #f8f8f8 inset;*/
+	background-color: #eee;
+}
+.userpanel_menu > a.current:hover {
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+<html>
+http://www.shadowbox-js.com/
+<head>
+	<link rel="stylesheet" type="text/css" href="shadowbox-3.0.3/shadowbox.css">
+	<script type="text/javascript" src="shadowbox-3.0.3/shadowbox.js"></script>
+	<script type="text/javascript">
+	
+	function setupDemos(){
+	    Shadowbox.setup("a.slideshow", {
+		gallery:        "mustang",
+		continuous:     true,
+		counterType:    "skip"
+	    });
+
+	}
+	
+	Shadowbox.init({
+		overlayColor: "#200700",
+		overlayOpacity: "0.8"
+	}, setupDemos);
+	</script>
+</head>
+
+<body>
+
+	<a href="images/p1.jpg" class="slideshow" >1</a>
+	<a href="images/p2.jpg" class="slideshow" >2</a>
+	<a href="images/p3.jpg" class="slideshow" >3</a>
+	<a href="images/p4.jpg" class="slideshow" >4</a>
+	
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+#cat_management {
+	padding:30px 0 60px 0;
+	width:100%;
+	text-align:right;
+	direction:rtl;
+}
+#cat_management .delimiter {
+	width:100%;
+	height:15px;
+	margin-bottom:15px;
+}
+#cat_management hr{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#cat_management select{
+	width:400px;
+	font:14px tahoma;
+}
+
+
+/*** position */
+#cat_form_management{
+	width:90%;
+	text-align:right;
+	direction:rtl;
+}
+#cat_form_management .record {
+	margin:0 15px 8px 0px;
+}
+#cat_form_management .record a > img.arrow {
+	width: 16px;
+	position: relative; top: 3px;
+}
+#cat_form_management .subanchor {
+	color:blue;
+	font-size:12px;
+	padding-right:10px;
+}
+#cat_form_management input[type=submit]{
+	width:80px;
+}
+#cat_form_management input[type=text]{
+	width:200px;
+}
+#cat_form_management #new{
+	padding-right:97px;
+}
+#cat_form_management div a img{
+	padding-left:5px;
+	padding-right:5px;
+}
+#cat_form_management .title,
+#cat_form_management .title a {
+	font:bold 14px tahoma ;
+}
+#cat_form_management div .manage{
+	padding-right:10px;
+	color:blue;
+	font-weight:bold;
+}
+/*********/

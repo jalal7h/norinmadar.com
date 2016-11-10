@@ -1,0 +1,208 @@
+
+/*admin*/
+
+* {
+	font-family: BYekan,Tahoma;
+}
+
+.logo-container {
+	width: 80%;
+	margin: 20px auto;
+	height: 66px;
+}
+.logo-container:before {
+	display: block;
+    position: relative;
+    top: -3px;
+    left: 25px;
+    content: "\f213";
+    font-size: 70px;
+    color: #A0A0A3;
+    font-family: FontAwesome;
+}
+
+body{
+	font-size:12px;
+	font-family:Tahoma;
+	color:#6d6d6d;
+	background: #eee !important;
+}
+table{
+	font-family:Tahoma;
+	font-size:12px;
+}
+tr{
+	font-family:Tahoma;
+	font-size:12px;
+}
+td{
+	font-family:Tahoma;
+	font-size:12px;
+}
+hr{
+	size:0px;
+	border:1px dotted #888888;
+	height:0px;
+	padding:0px;
+	margin:0px;
+}
+
+a , a:link , a:visited {
+	color:#777;
+	font-size:12px;
+	font-family:Tahoma;
+	text-decoration:none;
+}
+a:hover {
+	color:#c00;
+}
+
+td,input,textarea,select,button,submit {
+	font-family:tahoma;
+	font-size:12px;
+}
+input[type=text],input[type=password],textarea {
+	border:1px solid #cccccc;
+	padding:8px 10px;
+	background-color:white;
+}
+select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('../images/select-tag-drop-icon.png') no-repeat 7px 50%;
+    padding-left: 28px !important;
+}
+select,input[type=submit],input[type=button]{
+	background-color:#ffffff;
+	border:1px solid #cccccc;
+	cursor:pointer;
+	padding:7px 9px;
+}
+input[type=submit]:hover,input[type=button]:hover,input[type=text]:hover,input[type=password]:hover,select:hover,textarea:hover {
+	border:1px solid #f0f0f0;
+	background-color:white;
+}
+
+.tx0{
+	font-family: tahoma;
+	font-size:10px;
+}
+.tx1{
+	font-family: tahoma;
+	font-size:11px;
+}
+.tx2{
+	font-family: tahoma;
+	font-size:12px;
+}
+
+#dhtmltooltip{
+position: absolute;
+left: -300px;
+width: 150px;
+border: 1px solid black;
+padding: 2px;
+background-color: lightyellow;
+visibility: hidden;
+z-index: 100;
+/*Remove below line to remove shadow. Below line should always appear last within this CSS*/
+filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);
+}
+
+#dhtmlpointer{
+position:absolute;
+left: -300px;
+z-index: 101;
+visibility: hidden;
+}
+
+.adminCpIcons:visited,.adminCpIcons:link{
+	color:black;
+	text-shadow: -1px 0 #ffffbb, 0 1px #ffffbb, 1px 0 #ffffbb, 0 -1px #ffffbb;
+}
+.adminCpIcons:hover{
+	color:#444400;
+	text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+
+/*** task */
+.task_notifier{
+	background-color:#eee;
+	color:orange;
+	font:11px tahoma;
+	direction:rtl;
+	height:23px;
+	width:90px;
+	padding-top:5px;
+	padding-bottom:0px;
+	border:1px solid #ccc;
+	float:left;
+	margin-right:10px;
+}
+.task_notifier:hover{
+	background-color:#f4f4f4;
+	color:red;
+	border:1px solid #ddd;
+}
+.task_notifier b{
+	color:red;
+}
+/*********/
+
+/*** position */
+#position_management{
+	padding-top:30px;
+	width:90%;
+	text-align:right;
+	direction:rtl;
+}
+#position_management input[type=submit]{
+	width:80px;
+}
+#position_management input[type=text]{
+	width:200px;
+}
+#position_management #new{
+	padding-right:36px;
+}
+#position_management div a img{
+	padding-left:10px;
+	padding-right:10px;
+}
+#position_management #title{
+	padding:10px;
+	font-weight:bold;
+	color:black;
+	cursor:default;
+}
+#position_management div .manage{
+	padding-right:10px;
+	color:blue;
+	font-weight:bold;
+}
+/*********/
+
+/*** admin main */
+#admin_main_panel td{
+	background-repeat:no-repeat; 
+	padding-left:10px;
+	padding-right:10px;
+}
+#admin_main_panel td a{
+	font-weight:normal;
+	color:black;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+#admin_main_panel td span{
+	position:relative;
+	top:-30px;
+}
+#admin_main_panel td a:hover{
+	color:white;
+	font-weight:bold;
+	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+/*********/
+

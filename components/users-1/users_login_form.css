@@ -1,0 +1,51 @@
+
+#users_login_form {
+	margin: auto;
+	display: block;
+	margin-right: 8%;
+	margin-bottom: 8%;
+}
+#users_login_form .container {
+	margin: 30px;
+}
+#users_login_form .d01 {
+	margin: 20px 0 30px 0;
+	font: bold 40px tahoma;
+	color: #666;
+}
+#users_login_form .d02 {
+
+}
+#users_login_form .d03 {
+
+}
+#users_login_form .d04 {
+	display: inline-block;
+	margin: 5px 5px 0 0;
+	font: normal 13px tahoma !important;
+}
+#users_login_form input {
+	direction: ltr;
+	display: block;
+	font: normal 16px monospace,tahoma;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin: 5px 0 5px 0;
+	width: 450px;
+	max-width: 95%;
+}
+#users_login_form input[type=submit] {
+	background: rgb(76, 147, 199);
+	color: white;
+}
+#users_login_form .d03 {
+	font: normal 10px tahoma;
+	margin: 0px 2px 20px 0;
+}
+#users_login_form .d04 {
+	font: normal 10px tahoma;
+}
+#users_login_form .d05 {
+	font: normal 10px tahoma;
+}

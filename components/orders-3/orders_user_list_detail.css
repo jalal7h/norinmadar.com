@@ -1,0 +1,126 @@
+
+/*index*/
+
+.orders_user_list_detail {
+	direction: rtl;
+	display: block;
+	text-align: left;
+	margin: 0 0 20px 0;
+}
+.orders_user_list_detail table {
+	text-align: right;
+	width: 100%;
+	/*border-radius: 5px;*/
+	border-spacing: 5px;
+    border-collapse: separate;
+}
+.orders_user_list_detail table th ,
+.orders_user_list_detail table td {
+	padding: 10px;
+    /*border-radius: 4px;*/
+    margin: 5px !important; 
+}
+.orders_user_list_detail table th {
+	text-align: center;
+	font: bold 13px BYekan,tahoma;
+    cursor: default;
+    /*border-radius: 4px;*/
+    background-color: #ddd;
+    color: #444;
+}
+.orders_user_list_detail table td {
+	text-align: center;
+	font: normal 17px BYekan, tahoma;
+	vertical-align: middle;
+	/*box-shadow: 0 0 10px #D4D4D4;*/
+	background-color: #f8f8f8;
+}
+.orders_user_list_detail table td:nth-child(1) {
+	padding: 0px;
+	height: 50px;
+	max-width: 70px;
+}
+.orders_user_list_detail table td:nth-child(1) img {
+	margin: 10px 0 10px 0;
+	padding: 0px;
+}
+.orders_user_list_detail table td:nth-child(2) {
+	text-align: right;
+	font: normal 13px BYekan,tahoma;
+}
+.orders_user_list_detail table td select {
+	width: 60px;
+}
+.orders_user_list_detail .confirm-button {
+	display: inline-block;
+	/*float: left;*/
+	height: 48px;
+	width: 220px;
+	background-repeat: no-repeat;
+	margin: 20px 0 20px 0;
+}
+.orders_user_list_detail .confirm-button:nth-child(1){
+	margin-top: 0;
+}
+.orders_user_list_detail .confirm-button:hover {
+	background-position: 0 -58px;
+}
+
+.orders_user_list_detail .path {
+	border: 1px dashed #ccc;
+	border-width: 1px 0 1px 0;
+	margin: 40px 0 20px 0;
+	padding: 10px;
+	direction: rtl;
+	text-align: right;
+}
+.orders_user_list_detail .path .name ,
+.orders_user_list_detail .path .address ,
+.orders_user_list_detail .path .tell {
+	display: block;
+	font: normal 16px BYekan;
+	direction: rtl;
+	margin: 20px 30px;
+	line-height: 25px !important;
+}
+.orders_user_list_detail .path .name > a {
+	line-height: 25px !important;
+	font: normal 16px BYekan;
+}
+.orders_user_list_detail .sendbutton {
+	display: inline-block;
+	background-color: rgb(117, 172, 0);
+	padding: 10px 25px;
+	font: normal 13px BYekan;
+	color: white;
+	border-radius: 3px;
+	text-decoration: none;
+	box-shadow: 0 0 10px #ccc;
+	font: bold 18px BYekan;
+}
+
+.orders_user_list_detail .convbox {
+	background: #FFC2C2;
+	color: #5C5C5C;
+	box-shadow: 0 0 20px #D2D2D2;
+}
+.orders_user_list_detail .convgreen {
+	background-color: rgb(208, 255, 208) !important;
+}
+.orders_user_list_detail center {
+	display: block;
+	margin: 20px auto 60px auto;
+}
+
+.orders_user_list_detail .header-delimiter ,
+.orders_user_list_detail .header-delimiter * {
+	background-color: transparent;
+	padding: 0px;
+	margin: 0px;
+	box-shadow: 0px 0px 0px #ccc;
+	height: 7px !important;
+}
+
+
+
+

@@ -1,0 +1,39 @@
+
+/*admin*/
+
+.billing_management_methods {
+	direction: rtl;
+	margin: 20px 0 0 0;
+}
+.billing_management_methods .r {
+	border: 1px solid #eee;
+	box-shadow: 0 0 20px #f4f4f4 inset;
+	margin: 10px 0 10px 0;
+	width: 100%;
+	height: 80px;
+	position: relative;
+	background: white;
+}
+.billing_management_methods .r > *{
+	vertical-align: middle;
+}
+.billing_management_methods .r img {
+	position: absolute; right: 30px; top: 20px;
+	width: 120px;
+}
+.billing_management_methods .r span {
+	font-size: 16px;
+	position: relative; top: 33px;
+}
+.billing_management_methods .r .input-box {
+	position: absolute; left: 20px; top: 20px;
+}
+.billing_management_methods .r input[type=button] {
+	padding: 12px 24px 12px 24px;
+	width: auto;
+}
+.billing_management_methods .r input[type=button]:hover {
+	background: #f4f4f4;
+	border: 1px solid #ddd;
+}
+

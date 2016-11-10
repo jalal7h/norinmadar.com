@@ -1,0 +1,106 @@
+
+/*index*/
+
+* {
+	margin:0;
+	padding:0;
+	line-height:1.0 !important;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+*:focus {
+	outline:0;
+}
+*::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+::selection {
+	color:white;
+	background:orange;
+}
+::-moz-selection {
+	color:white;
+	background:orange;
+}
+
+input,textarea {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+	outline: none;
+}
+
+img {
+	border:none;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration:none;
+	color: #000000;
+}
+
+a:hover {
+	color: #A90000;
+}
+
+table,
+tr,
+td,
+th,
+span,
+div,
+input,
+select,
+form {
+	font:12px BYekan,Tahoma;
+}
+
+select,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=submit],
+input[type=reset],
+input[type=button],
+textarea,
+reset {
+	background-color:#ffffff;
+	border:1px solid #cccccc;
+	padding:6px;
+/*	margin-left:8px;*/
+/*	margin-top:2px;*/
+/*	margin-bottom:2px;*/
+	color:#666;
+	width:160px;
+	font-family:BYekan,Tahoma;
+	font-size:12px;
+	outline: 0;
+}
+input[type=submit],
+input[type=reset],
+input[type=button] {
+	cursor:pointer;
+	margin:1px;
+}
+input[type=checkbox] {
+	position:relative;
+	top:3px;
+	left:5px;
+}
+select:hover,
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=password]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+reset:hover,
+textarea:hover,
+input[type=button]:hover {
+	border:1px solid #f0f0f0;
+	background-color:white;
+	color:#000;
+}

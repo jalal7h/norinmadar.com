@@ -1,0 +1,58 @@
+
+.d01 {
+	margin: 40px 0 40px 0;
+}
+.users_register_form {
+	margin: auto;
+	display: block;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+.users_register_form .container {
+	margin: 30px;
+}
+.users_register_form .d02 {
+	margin: 20px 0 30px 0;
+	font: bold 40px tahoma;
+	color: #666;
+}
+.users_register_form input {
+	/*direction: ltr;*/
+	display: block;
+	font: normal 16px tahoma;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin: 5px 0 5px 0;
+	width: 450px;
+	max-width: 95%;
+	direction: ltr;
+}
+.users_register_form input[name="name"] {
+	direction: rtl !important;
+	width: 270px !important;
+	display: inline-block;
+	direction: rtl;
+}
+.users_register_form input[name="cell"] {
+	width: 170px;
+	display: inline-block;
+	margin-right: 7px;
+}
+.users_register_form input[name="username"] {
+	margin-bottom: 10px;
+}
+.users_register_form input[type=submit] {
+	margin: 10px 0px !important;
+}
+.users_register_form .d03 {
+	font: normal 10px tahoma;
+	margin: -5px 10px 10px 0;
+}
+.users_register_form .d04 {
+	font: normal 10px tahoma;
+	margin-top: 20px;
+}
+.users_register_form .d05 {
+	font: normal 10px tahoma;
+}

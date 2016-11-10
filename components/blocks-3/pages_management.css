@@ -1,0 +1,124 @@
+
+.pages_management {
+	margin: 10px auto 50px auto;
+}
+.pages_management td {
+	vertical-align: top; 
+}
+.pages_management fieldset {
+	margin: 0 3px 5px 3px;
+	/*width: 98%;*/
+	direction: rtl;
+}
+.pages_management .block-head {
+	height: 25px;
+	line-height: 25px !important;
+}
+.pages_management .block-box td {
+	vertical-align: middle !important;
+}
+.pages_management .block-box {
+	box-shadow: 0 0 10px #999;
+	margin-bottom: 10px;
+	width: 100%;
+    box-sizing: border-box;
+}
+.pages_management .block-box .box-title {
+	color:#334c54;
+	font-size:10px;
+	margin: 5px;
+	display: inline-block;
+	line-height: 16px !important;
+}
+
+.pages_management_editlayer_panel_post {
+
+}
+.pages_management_editlayer_panel_post #blocktype {
+	width:250px;
+	margin: 10px 0;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 0 10px #ccc;
+}
+.pages_management_editlayer_panel_post input[name=_title] {
+	width:250px;
+	margin: 10px 0;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 0 10px #ccc;
+}
+.pages_management_editlayer_panel_post textarea[name=_data] {
+	font: normal 12px Monospace,'Courier New';
+	line-height: 20px;
+	outline: none;
+	margin: 10px 0 10px 0;
+	box-shadow: 0 0 10px #ccc;
+	width:100%;
+	height:200px;
+}
+
+.pages_management_editlayer_panel_post input[type=submit] ,
+.pages_management_editlayer_panel_post input[type=reset] {
+	margin: 20px 10px;
+}
+.pages_management_editlayer_panel_post input[type=checkbox] {
+	margin: 10px;
+}
+.pages_management_editlayer_panel_post input[type=radio] {
+	margin: 10px 10px 0 0;
+}
+
+.pages_management_list {
+	
+}
+.pages_management_list .row td:nth-child(2) {
+	vertical-align: top;
+}
+.pages_management_list .row div {
+	margin-top: 12px;	
+}
+.pages_management_list .row div .meta {
+	display: none;
+}
+.pages_management_list .row:hover .meta {
+	display: inline-block;
+	margin: 4px 7px 0 0;
+	color: #777;
+	border-radius: 15px;
+	padding: 1px 8px 3px 8px;
+	background-color: #ddd;
+}
+.pages_management_list .row .meta:hover {
+	color: white;
+	background-color: #555;
+}
+
+.pages_management_meta {
+	direction: rtl;
+	padding: 10px 50px;
+	text-align: right;
+}
+.pages_management_meta span {
+	padding: 30px 0 10px 0;
+	display: inline-block;
+}
+.pages_management_meta textarea {
+	width: 100%;
+	height: 100px;
+	font-family: monospace, 'Courier new';
+	direction: ltr;
+	border: 0px;
+	box-shadow: 0 0 20px #ddd;
+}
+.pages_management_meta .submit-div {
+	text-align: center;
+	margin: 40px auto 80px;
+}
+
+
+
+
+
+
+

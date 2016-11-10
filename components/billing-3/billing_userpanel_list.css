@@ -1,0 +1,43 @@
+
+.billing_userpanel_list {
+	width: 100%;
+	direction: rtl;
+	margin: 0 0 10px 0;
+
+}
+.billing_userpanel_list th ,
+.billing_userpanel_list td {
+	padding: 15px;
+	border: 1px solid #eee;
+	border-width: 1px 0 1px 0;
+	text-align: center;
+	vertical-align: middle;
+}
+.billing_userpanel_list th {
+	background-color: #f2f2f2;
+	text-align: center;
+	font-weight: bold;
+	cursor: default;
+}
+.billing_userpanel_list .ltr {
+	font-family: "courier new";
+	direction: ltr;
+}
+.billing_userpanel_list .payment {
+	display: inline-block;
+	background-color: rgb(117, 172, 0);
+	padding: 7px 15px;
+	font: normal 13px BYekan;
+	color: white;
+	border-radius: 3px;
+	margin: 3px; 
+	text-decoration: none;
+	box-shadow: 0 0 10px #ccc;
+}
+.billing_userpanel_list tr:nth-child(odd) td {
+	background-color: #fafafa;
+}
+
+
+
+

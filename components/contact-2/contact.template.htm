@@ -1,0 +1,46 @@
+
+
+<div class="contact_display">
+	
+	<div class="path">
+		<div>آدرس شرکت : {cu_company_addr}</div>
+		<div>دفتر فروش : <span dir=ltr >{cu_company_tell}</div>
+		<div>دفتر پشتیبانی : <span dir=ltr >{cu_company_fax}</div>
+	</div>
+
+	<form method="post" name="form21" action="./?page={page}&do=send_contactUsForm" id="contact_display">
+	<fieldset>
+		<legend>
+		<select name="_dest">
+		<option value="">ارتباط با ..</option>
+		<script>
+		if('{email_address_management}'!='')document.write('<option value="management">مديريت</option>');
+		if('{email_address_sell}'!='')document.write('<option value="sell">بخش آموزش</option>');
+		if('{email_address_support}'!='')document.write('<option value="support">پشتيباني</option>');
+		if('{email_address_webadmin}'!='')document.write('<option value="webadmin">مدير سايت</option>');
+		</script>
+		</select>
+		</legend>
+		<img src="http://parsunix.com/cdn/img/contact.jpg" class="handshaking" />
+		<div class="right">
+		<input placeholder="نام" type="text" name="name" value="{user_name}">
+		<input placeholder="تلفن" type="text" name="tell" value="{user_tell}">
+		<input placeholder="ایمیل" type="email" name="_mail" value="{user_mail}">
+		<textarea placeholder="متن پیام ..." name="_cont" ></textarea>
+		<input type="submit" value="ارسال" class="submit_button" >
+		</div>
+	</fieldset>
+	</form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

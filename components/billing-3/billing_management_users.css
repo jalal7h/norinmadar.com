@@ -1,0 +1,52 @@
+
+/*admin*/
+
+.billing_management_users_invoice_list {
+	margin: 10px;
+	/*border: 1px solid #ccc;*/
+	box-shadow: 0 0 3px #ccc;
+	direction: rtl;
+}
+.billing_management_users_invoice_list .r {
+	text-align: right;
+}
+.billing_management_users_invoice_list .r:nth-child(2n+1) {
+	background: #F9FCFF;
+}
+.billing_management_users_invoice_list .r:nth-child(1) {
+	background: rgb(76, 147, 199);
+	color: white;
+	border-radius: 2px 2px 0 0;
+}
+.billing_management_users_invoice_list .r:nth-child(1) > * {
+	text-align: center;
+	padding: 5px 0 5px 0;
+	font-weight: bold;
+}
+.billing_management_users_invoice_list .r > div {
+	display: inline-block;
+	margin: 10px 5px 10px 5px;
+	/*padding-right: 20px;*/
+}
+.billing_management_users_invoice_list .r > div:nth-child(1) {
+	width: 10%;
+	text-align: center;
+}
+.billing_management_users_invoice_list .r > div:nth-child(2) {
+	width: 25%;
+	text-align: right;
+}
+.billing_management_users_invoice_list .r > div:nth-child(3) {
+	width: 15%;
+	text-align: center;
+}
+.billing_management_users_invoice_list .r > div:nth-child(4) {
+	width: 25%;
+	direction: ltr;
+	text-align: center;
+}
+.billing_management_users_invoice_list .r > div:nth-child(5) {
+	width: 15%;
+	direction: ltr;
+	text-align: center;
+}

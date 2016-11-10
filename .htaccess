@@ -1,0 +1,67 @@
+RewriteEngine On
+
+# 
+# billing-3
+RewriteRule ^billing-payment([0-9]+)$ ./?page=14&do=billing_userpanel_payment&order_id=$1 [L]
+
+# 
+# contact-2
+RewriteRule ^contact$ ./?page=2 [L]
+
+# 
+# faq-1
+RewriteRule ^faq$ ./?page=20 [L]
+
+# 
+# irtoya
+RewriteRule ^([0-9]+)-(.*).html$ ./?page=156&id=$1 [L]
+RewriteRule ^compare-(.*)$ ./?page=157&id=$1 [L]
+RewriteRule ^compare$ ./?page=157 [L]
+
+# 
+# irtoya_staff
+RewriteRule ^product-([0-9]+)-(.*)$ ./?page=109&id=$1 [L]
+
+# 
+# main-2
+RewriteRule ^resize/([0-9]+)x([0-9]+)/(.*)$ ./?do_action=quick_resize&width=$1&height=$2&address=$3 [L]
+RewriteRule ^admin$ ./?page=admin [L]
+RewriteRule ^scripts.js$ ./?do_action=include_all_js [L]
+RewriteRule ^scripts-admin.js$ ./?do_action=include_all_js&page=admin [L]
+RewriteRule ^styles.css$ ./?do_action=include_all_css [L]
+RewriteRule ^styles-admin.css$ ./?do_action=include_all_css&page=admin [L]
+RewriteRule ^about$ ./?page=3 [L]
+RewriteRule ^terms$ ./?page=6 [L]
+RewriteRule ^privacy$ ./?page=7 [L]
+RewriteRule ^image\.list/(.*)$ ./?do_action=imgp_echo&filename=$1 [L]
+
+# 
+# news-2
+RewriteRule ^news$ ./?page=51 [L]
+RewriteRule ^news-([0-9]+)-(.*).html$ ./?page=52&id=$1 [L]
+
+# 
+# orders-3
+RewriteRule ^orders-basket$ ./?page=66 [L]
+RewriteRule ^orders-basket-([0-9]+)$ ./?page=66&do=add&id=$1 [L]
+RewriteRule ^orders-basket-confirm$ ./?page=66&do=confirm [L]
+RewriteRule ^orders_paymentdone-([0-9]+)$ ./?page=66&do=paymentdone&order_id=$1 [L]
+
+RewriteRule ^orders-list$ ./?page=62&do=orders_user_list [L]
+
+# 
+# seo-2
+RewriteRule ^sitemap.xml$ ./?do_action=seo_sitemap [L]
+RewriteRule ^rss/([a-zA-Z0-9]+)\.xml$ ./?do_action=seo_rss&feed=$1 [L]
+
+# 
+# userpanel-2
+RewriteRule ^userpanel$ ./?page=14 [L]
+
+# 
+# users-1
+RewriteRule ^register$ ./?page=58 [L]
+RewriteRule ^register_do$ ./?page=59 [L]
+RewriteRule ^login$ ./?page=60 [L]
+RewriteRule ^forgot$ ./?page=63 [L]
+

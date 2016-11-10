@@ -1,0 +1,34 @@
+
+.cm_list {
+	display: block;
+	border-top: 1px dashed #ccc;
+	max-width: 95%;
+	margin: 0 auto;
+	clear: both;
+}
+.cm_list * {
+	line-height: 20px !important;
+}
+.cm_list .r {
+	padding: 5px 5px;
+	margin-bottom: 20px;
+	border-radius: 4px;
+}
+.cm_list .name {
+	margin: 0 5px 0 0;
+}
+.cm_list .r .date {
+	float: left;
+	margin: 0 0 0 5px;
+	direction: ltr;
+	font-family: monospace, 'courier new', tahoma;
+}
+
+.cm_list .r .text {
+	margin: 10px 20px 5px 20px;
+	width: 70%;
+	text-align: justify;
+}
+.cm_list .r:nth-child(odd) {
+	background: #f8f8f8;
+}

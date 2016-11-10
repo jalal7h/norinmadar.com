@@ -1,0 +1,45 @@
+
+.is_management_form {
+	direction: rtl;
+	margin: 30px auto;
+}
+.is_management_form > div {
+	display: inline-block;
+	width: 40%;
+	margin: 10px;
+}
+.is_management_form > div > input[type="text"] {
+	width: 100%;
+	font-size: 16px;
+	padding: 12px;
+}
+#is_management_form_code {
+	
+}
+#is_management_form_brand_en {
+	
+}
+#is_management_form_brand_fa {
+	
+}
+#is_management_form_name {
+	
+}
+#is_management_form_year {
+	
+}
+#is_management_form_model_en {
+	
+}
+#is_management_form_model_fa {
+	
+}
+#is_management_form_quality {
+	
+}
+#is_management_form_price {
+	
+}
+#is_management_form_submit {
+	
+}

@@ -1,0 +1,102 @@
+
+.lmffts {
+	display: block;
+	margin: 25px 10px 5px 0;
+	font-size: 14px;
+}
+.lmff_div {
+	display: block;
+	float: none;
+	clear: both;
+	/*margin-right: 40px;*/
+	margin-bottom: 5px;
+}
+.lmff_div:nth-child(1) {
+	display: inline-block;
+}
+.lmff_div input[type=file] {
+	/*float: none !important;*/
+	/*display: inline-block !important;*/
+}
+.lmff_span {
+	
+}
+.lmff_span:hover {
+	opacity: 0.8;
+}
+
+.lmff_file {
+	float: none !important;
+	display: none !important;
+}
+
+.lmff_aplus {
+	font: bold 16px BYekan,Tahoma !important;
+	color: rgb(117, 172, 0) !important;
+	margin: 0 15px 0 0;
+}
+
+.lmfffpuf {
+	display: inline-block;
+	direction: ltr;
+	/*width: 600px;*/
+	text-align: left;
+	vertical-align: top;
+	margin: 35px 50px 20px 0;
+}
+.lmfffpuf > a {
+	cursor: pointer;
+	margin: 10px;
+	display: block;
+	vertical-align: top;
+	border-radius: 4px;
+	transition: all 0.2s;
+}
+.lmfffpuf > a:hover {
+	background: rgba(255, 0, 0, 0.1);
+}
+.lmfffpuf > a:hover img {
+	opacity: 0.0;
+}
+.lmfffpuf > a:hover .imgc {
+	background: #c00;
+}
+.lmfffpuf > a span {
+	font: normal 20px 'Courier New', tahoma;
+	vertical-align: top;
+	padding: 6px 10px 0 0;
+	display: inline-block;
+}
+.lmfffpuf div.imgc {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	border-radius: 4px;
+	width: 40px;
+	height: 35px;
+}
+.lmfffpuf div.imgc.notpic {
+	background: #ccc;
+	font: normal 14px 'Courier New', tahoma;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+	line-height: 34px;
+}
+.lmfffpuf img {
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	transition: all 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
