@@ -5,7 +5,7 @@
 # Version 1.2
 
 # Database Config .........
-$GLOBALS['sqlhost'] = 'localhost';
+$GLOBALS['sqlhost'] = '127.0.0.1';
 $GLOBALS['sqluser'] = 'root';
 $GLOBALS['sqlpass'] = '';
 $GLOBALS['dtbname'] = 'LIVE_norinmadar.com';
