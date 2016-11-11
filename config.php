@@ -4,6 +4,7 @@
 # 2015/06/30
 # Version 1.2
 
+
 # Database Config .........
 $GLOBALS['sqlhost'] = '127.0.0.1';
 $GLOBALS['sqluser'] = 'root';
