@@ -1,11 +1,12 @@
 
 .is_list {
+	text-align: center;
 	margin: 10px -5px !important;
 }
 .is_list > .r {
 	padding: 0px;
 	margin: 6px 5px;
-	width: 300px !important;
+	width: 290px !important;
 	border-radius: 4px;
 }
 .is_list > .r > img.main {
