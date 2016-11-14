@@ -28,11 +28,11 @@ function news_list( $table_name=null , $page_id=null ){
 	} else {
 		echo $content;
 	}
-
 	return true;
 }
 
 function news_list_this( $rw ){
+	
 	$link = news_link( $rw );
 	$date = vaght_2_taghvim( U2Vaght($rw['date']) );
 	$text = sub_string(trim(strip_tags($rw['text'])),0,500);
@@ -47,9 +47,11 @@ function news_list_this( $rw ){
 			}
 			$tag = "کلمات کلیدی: ".implode(" , ", $tag_arr);
 		}
+
 	}
 	$c = '
 	<div class="r" >
+
 		<a href="'.$link.'" class="r" >
 			<img src="resize/310x224/'.$rw['pic'].'" />
 			<div class="visit">'.$rw['visit'].' بازدید</div>

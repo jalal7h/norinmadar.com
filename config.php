@@ -19,4 +19,3 @@ define( 'browser_version_check' , false );
 
 
 
-

@@ -15,19 +15,28 @@ function is_management_form(){
 	
 	
 	echo 
-	fm(array('name'=>'is_management_form' , 'class'=>'is_management_form' , 'method'=>'post' , 'action'=>'?page=admin&cp='.$_REQUEST['cp'].'&func='.$_REQUEST['cp'].'_list','save_switch'=>'do'));
-
-	foreach ($GLOBALS['irtoya_staff_order_of_columns'] as $k => $column) {
-		echo ff(array(lmtc("irtoya_staff:".$column),'n:'.$column=>$rw,'inDiv'));
-	}
+		fm(array('name'=>'is_management_form' , 'class'=>'is_management_form' , 'method'=>'post' , 'action'=>'?page=admin&cp='.$_REQUEST['cp'].'&func='.$_REQUEST['cp'].'_list','save_switch'=>'do'));
 
 	echo 
-		"<div></div>".
-		"<div style='width: 80%;text-align: right; margin: 30px 0px 80px 0;'>".
+		
+		ff(array("نام محصول",'n:name'=>$rw,'inDiv')).
+		
+		ff(array("کدمحصول",'n:code'=>$rw,'inDiv')).
+		
+		ff(array("مشخصات فنی",'t:textarea','n:technical_features'=>$rw,'inDiv')).
+		
+		ff(array("تعداد",'n:number'=>$rw,'inDiv')).
+		
+		ff(array("قیمت",'n:price'=>$rw,'inDiv')).
+		
+		ff(array("توضیحات",'t:textarea','n:desc'=>$rw,'inDiv')).
+		
+
 		ff(array('عکس','n:autoparts[]+'=>'','accept'=>'image/*','inDiv')).
 		ff('br').
 		ff('br').
 		ff('br').
+		
 		ff(array('t:submit','n:submit'=>'ثبت', 'class'=>'submit_button', 'inDiv')).
 		"</div>".
 		fm('close' , $listifcsselements=false );

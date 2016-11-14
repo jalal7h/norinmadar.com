@@ -2,36 +2,41 @@
 .is_display {
 	display: inline-block;
 	position: relative;
-	margin-left: -270px;
-	padding-left: 270px;
 	margin-top: 30px;
 	width: 100%;
+	
 }
 .is_display .pics {
 	display: inline-block;
-	width: 38%;
+	width: 40%;
 }
 .is_display .pics img.main {
-	width: 100%;
 	border-radius: 5px;
 	vertical-align: top;
 }
 .is_display .pics .tiny {
-	margin: 7px -2px 7px -1px;
 }
 .is_display .pics .tiny img {
 	border-radius: 4px;
 	height: 73px;
-	width: 73px;
+	width: 0px;
 	margin: 0 2px;
 }
 .is_display .text {
-	width: 58%;
+	width: 25%;
+	height: 300px;
+	
 	display: inline-block;
 	vertical-align: top;
-	margin: 0px 40px 0 -40px;
-	padding-left: 40px;
+	text-align: right;
+	direction: rtl;
+	margin: 0px 0px 0px 0px;
+	margin-right: -48px;
 }
+.model{
+	
+}
+
 .is_display .text > div ,
 .is_display .text > div > span {
 	font-size: 15px;
@@ -42,6 +47,7 @@
 }
 .is_display .text > div > span {
 	color: #888;
+	padding: 5px;
 	display: inline-block;
 	margin-left: 10px;
 }
@@ -53,21 +59,31 @@
 	margin-left: 10px;
 }
 .is_display .desc {
+	display: inline-block;
 	border-radius: 5px;
 	background-color: #f8f8f8;
 	padding: 5px 20px 15px 20px;
 	font-size: 15px;
 	line-height: 22px !important;
 	margin-top: 10px;
+	margin-right: 10px;
+	width: 38%;
+	min-height: 300px;
+	vertical-align: top;
 }
 .is_display .desc > div {
 	color: #888;
 	font-size: 15px;
 	line-height: 36px !important;
 }
+.p-dec{
+	min-height: 100px;
+	font-size: 1em;
+	word-break:break-all;
+}
 .orders_basket_addbutton {
 	width: auto !important;
-	padding: 12px 25px 7px 25px !important;
+	padding: 8px 15px 5px 15px !important;
 	background-color: #A90000 !important;
 	display: inline-block !important;
 	position: relative !important;

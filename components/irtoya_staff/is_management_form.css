@@ -2,11 +2,14 @@
 .is_management_form {
 	direction: rtl;
 	margin: 30px auto;
+	text-align: right;
 }
 .is_management_form > div {
 	display: inline-block;
-	width: 40%;
+	width: 50%;
 	margin: 10px;
+	direction: rtl;
+	text-align: right;
 }
 .is_management_form > div > input[type="text"] {
 	width: 100%;
@@ -42,4 +45,7 @@
 }
 #is_management_form_submit {
 	
+}
+#is_management_form_desc{
+
 }

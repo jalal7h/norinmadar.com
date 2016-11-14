@@ -3,6 +3,10 @@
 # jalal7h@gmail.com
 # 2015/00/00
 # Version 1.0.0
+function is_management_howtobuy_form(){
+
+	
+}
 
 function is_management_import_form(){
 

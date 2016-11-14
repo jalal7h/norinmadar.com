@@ -3,16 +3,9 @@
 # jalal7h@gmail.com
 # 2015/10/20
 # Version 1.0.0
+$GLOBALS['block_layers']['is_list']="لیست محصولات";
+function is_list($table_name=null , $page_id=null){
 
-function is_list(){
-
-	?>
-	<form class="is_list_search" method="get" action="">
-		<input type="hidden" name="page" value="<?=$_REQUEST['page']?>">
-		<input type="text" placeholder="جستجو در بین قطعات ..." name="q" value="<?=$_REQUEST['q']?>">
-		<input type="submit" class="submit_button" value="جستجو" />
-	</form>
-	<?
 
 	$list['name'] = 'is_list';
 	$list['head'] = '';
@@ -26,11 +19,22 @@ function is_list(){
 	$list['paging_url'] = '_URL."/?page=".$_REQUEST["page"]."&q=".$_REQUEST["q"]."&p=%%"';
 	$list['pattern'] = 'is_list_this($rw)';
 	$list['search'] = array("name","brand_fa","brand_en","model_fa","model_en");
+	
+	if($page_id){
+
+		$title = table( $table_name , $page_id , "_title" , "_id" );
+		create_box($title, $allow_eval=false, $framed=true, $position="center");
+	
+	} else {
+		echo $content;
+	}
 
 	echo listmaker_showcase($list);
+
 }
 
 function is_list_this( $rw ){
+
 	$path = "data/autoparts/".$rw['id'];
 	if(!$list = fileupload_filelist($path)){
 		$list[0] = 'image.list/is-no-pic.jpg';
@@ -43,14 +47,15 @@ function is_list_this( $rw ){
 	}
 
 	$c.= "
-	<img class='main' src='".$list[0]."' />
-	<div class='tiny' >
-		".$tinypics."
-	</div>
-	<div>
-		<div class='text'>".$rw['name']."، ".$rw['brand_fa']." ".$rw['model_fa']."</div>
-		<div class='order'>ثبت سفارش</div>
-	</div><!-- text -->
+		<img class='main' src='".$list[0]."' />
+		
+	
+		<div>
+			<div class='text'>".$rw['name']."، ".$rw['brand_fa']." ".$rw['model_fa']."</div>
+			<div class='order'>ثبت سفارش</div>
+		</div><!-- text -->
+
+
 	";
 
 	return $c;

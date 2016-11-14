@@ -18,7 +18,11 @@
 	margin-bottom: 30px;
 }
 #main_center {
-	width:100%;
+	max-width: 1200px;
+	width:80%;
+	margin: 0 auto;
+	padding: 0px 54px;
+	direction: rtl;
 }
 #main_down {
 	width:100%;

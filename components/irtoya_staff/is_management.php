@@ -19,16 +19,11 @@ function is_management(){
 
 
 $GLOBALS['irtoya_staff_order_of_columns'] = array(
-	'code',
-	'brand_en',
-	'brand_fa',
 	'name',
-	'year',
-	'model_en',
-	'model_fa',
-	'quality',
+	'code',
+	'number',
 	'price',
 	'desc',
+	'technical_features',
 );
-
 

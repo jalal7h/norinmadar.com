@@ -5,16 +5,15 @@
 .is_list > .r {
 	padding: 0px;
 	margin: 6px 5px;
-	width: 23.9% !important;
+	width: 300px !important;
 	border-radius: 4px;
 }
 .is_list > .r > img.main {
 	display: inline-block;
-	width: 192px;
+	width: 90%;
     height: 192px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    margin: 10px;
+    text-align: center;
     border-radius: 4px;
 }
 .is_list > .r div.tiny {
@@ -51,7 +50,7 @@
     padding: 0px 7px;
     border-radius: 4px;
     font-size: 14px;
-    width: 147px;
+    width: 200px;
     overflow: hidden;
     text-align: right;
     height: 28px;
@@ -94,7 +93,12 @@
 	border: 0px !important;
 	border-radius: 6px;
 }
+.is_list_A{
+	margin: 0 auto;
+	width: 75%;
+	direction: rtl;
 
+}
 
 
 

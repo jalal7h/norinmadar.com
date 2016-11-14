@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.1
+-- version 4.3.3
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 10, 2016 at 11:07 AM
--- Server version: 5.6.27
--- PHP Version: 5.6.14
+-- Generation Time: Nov 14, 2016 at 10:22 PM
+-- Server version: 5.6.28-0ubuntu0.15.04.1
+-- PHP Version: 5.6.4-4ubuntu6.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `LIVE_norinmadar.com`
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `billing_invoice`
 --
 
-CREATE TABLE `billing_invoice` (
+CREATE TABLE IF NOT EXISTS `billing_invoice` (
   `id` int(11) NOT NULL,
   `uid` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE `billing_invoice` (
 -- Table structure for table `billing_method`
 --
 
-CREATE TABLE `billing_method` (
+CREATE TABLE IF NOT EXISTS `billing_method` (
   `id` int(11) NOT NULL,
   `method` text COLLATE utf8_persian_ci NOT NULL,
   `unit` text COLLATE utf8_persian_ci NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE `billing_method` (
   `c4` text COLLATE utf8_persian_ci NOT NULL,
   `c5` text COLLATE utf8_persian_ci NOT NULL,
   `hide` int(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `billing_method`
@@ -72,14 +72,14 @@ INSERT INTO `billing_method` (`id`, `method`, `unit`, `terminal_id`, `terminal_u
 -- Table structure for table `cat`
 --
 
-CREATE TABLE `cat` (
+CREATE TABLE IF NOT EXISTS `cat` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `parent` int(11) NOT NULL,
   `cat` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `ord` int(11) NOT NULL,
   `logo` varchar(255) COLLATE utf8_persian_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `cat`
@@ -92,7 +92,9 @@ INSERT INTO `cat` (`id`, `name`, `parent`, `cat`, `ord`, `logo`) VALUES
 (8, 'تویوتا', 0, 'brand', 0, 'data/cat/brand/0-7dd58ba17134dbf76d5703999c65a8a6.png'),
 (14, 'لکسوس', 0, 'brand', 0, 'data/cat/brand/0-1421e209270f68250a2fef1b81ac2fa9.png'),
 (11, 'کیا', 0, 'brand', 0, 'data/cat/brand/0-538de897459e751e8c46343cc9fc5371.png'),
-(12, 'هیوندای', 0, 'brand', 0, 'data/cat/brand/0-baeae99903ae93e12e1e9aea391ccf50.png');
+(12, 'هیوندای', 0, 'brand', 0, 'data/cat/brand/0-baeae99903ae93e12e1e9aea391ccf50.png'),
+(16, 'از طریق پست', 0, 'how_to_buy', 0, ''),
+(17, 'نقدی', 0, 'how_to_buy', 0, '');
 
 -- --------------------------------------------------------
 
@@ -100,7 +102,7 @@ INSERT INTO `cat` (`id`, `name`, `parent`, `cat`, `ord`, `logo`) VALUES
 -- Table structure for table `comments`
 --
 
-CREATE TABLE `comments` (
+CREATE TABLE IF NOT EXISTS `comments` (
   `id` int(11) NOT NULL,
   `table` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `table_id` int(11) NOT NULL,
@@ -118,11 +120,11 @@ CREATE TABLE `comments` (
 -- Table structure for table `faq`
 --
 
-CREATE TABLE `faq` (
+CREATE TABLE IF NOT EXISTS `faq` (
   `id` int(11) NOT NULL,
   `name` text COLLATE utf8_persian_ci NOT NULL,
   `text` text COLLATE utf8_persian_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `faq`
@@ -138,19 +140,33 @@ INSERT INTO `faq` (`id`, `name`, `text`) VALUES
 -- Table structure for table `irtoya_staff`
 --
 
-CREATE TABLE `irtoya_staff` (
+CREATE TABLE IF NOT EXISTS `irtoya_staff` (
   `id` int(11) NOT NULL,
-  `code` varchar(300) COLLATE utf8_persian_ci NOT NULL COMMENT 'شماره فنی',
-  `brand_en` text COLLATE utf8_persian_ci NOT NULL COMMENT 'برند لاتین',
-  `brand_fa` text COLLATE utf8_persian_ci NOT NULL COMMENT 'برند فارسی',
-  `name` text COLLATE utf8_persian_ci NOT NULL COMMENT 'نام قطعه',
-  `year` text COLLATE utf8_persian_ci NOT NULL COMMENT 'سال تولید',
-  `model_en` text COLLATE utf8_persian_ci NOT NULL COMMENT 'مدل لاتین',
-  `model_fa` text COLLATE utf8_persian_ci NOT NULL COMMENT 'مدل فارسی',
-  `quality` text COLLATE utf8_persian_ci NOT NULL COMMENT 'کیفیت',
+  `name` text COLLATE utf8_persian_ci NOT NULL COMMENT 'نام محصول',
+  `code` varchar(300) COLLATE utf8_persian_ci NOT NULL COMMENT 'کد محصول',
+  `technical_features` text CHARACTER SET utf8mb4 COLLATE utf8mb4_persian_ci NOT NULL COMMENT 'مشخصات فنی',
+  `number` int(11) NOT NULL COMMENT 'تعداد',
   `price` text COLLATE utf8_persian_ci NOT NULL COMMENT 'قیمت',
-  `desc` text COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `desc` text COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات',
+  `autoparts` text COLLATE utf8_persian_ci NOT NULL COMMENT 'عکس'
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Dumping data for table `irtoya_staff`
+--
+
+INSERT INTO `irtoya_staff` (`id`, `name`, `code`, `technical_features`, `number`, `price`, `desc`, `autoparts`) VALUES
+(14, 'هدلایت موتوری MM3', '011', ' قدرت : ٢٤ وات  ------          \r\nتعداد و نوع LED : ٣ عدد COB------\r\nروشنایی : ٢٤٠٠ لومن------\r\nرنگ LED : سفید ٦٥٠٠-٧٠٠٠ كلوین------\r\nولتاژ ورودی : ٨-٣٦ ولت\r\nفن دارد------\r\n', 1, ' ٣٥٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد.', ''),
+(15, 'هدلایتMC1-2', '002', 'قدرت : ٤٠وات\r\nتعداد و نوع LED : ٢عدد COB\r\nروشنایی : ٤٠٠٠ لومن\r\nرنگ LED : سفید ٦٥٠٠-٧٠٠٠ كلوین\r\nولتاژ ورودی : ٨-٣٦ ولت\r\nفن دارد\r\n', 5, '٧٦٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد.', ''),
+(16, 'هدلایت موتوری 3 حالته', '003', ' قدرت : ٨ وات\r\nتعداد و نوع LED : ٣عدد \r\nروشنایی : ١٦٠٠ لومن\r\nرنگ LED : سفید ٦٥٠٠-٧٠٠٠ كلوین\r\nولتاژ ورودی : ٨-٣٦ ولت\r\nسه رنگ  : آبی ، قرمز ، سفید\r\n\r\nفن ندارد\r\n', 5, ' ٣٥٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد.', ''),
+(17, 'هدلایت موتوری 3 حالته', '004', ' قدرت : ٨ وات\r\nتعداد و نوع LED : ٣عدد \r\nروشنایی : ١٦٠٠ لومن\r\nرنگ LED : سفید ٦٥٠٠-٧٠٠٠ كلوین\r\nولتاژ ورودی : ٨-٣٦ ولت\r\nسه رنگ  : آبی ، قرمز ، سفید\r\nفن ندارد\r\n', 2, '٢١٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد.', ''),
+(18, 'هدلایت MG7', '005', 'قدرت : ٤٠ وات\r\nتعداد و نوع LED : ٢طرف ٤ عدد ZEC CHIP\r\nروشنایی : ٤٠٠٠ لومن\r\nرنگ LED : سفید٣٠٠٠ -٧٠٠٠ كلوین\r\nولتاژ ورودی : ٨-٣٦ ولت\r\nفن ندارد\r\n', 5, '١،٦١٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد.', ''),
+(19, 'هدلایت MG6', '006', 'قدرت : ٤٨ وات\r\nتعداد و نوع LED : ٤طرف ٦ عدد PHILIPS CHIP \r\nروشنایی : ٤٨٠٠ لومن\r\nرنگ LED : سفید ٣٠٠٠-٧٠٠٠ كلوین\r\nولتاژ ورودی : ٩-٣٦ ولت\r\nفن دارد', 4, '٢.٥٠٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد', ''),
+(20, 'هدلایت2-MC1', '007', 'قدرت : ٣٠وات\r\nتعداد و نوع LED : ٢عدد COB\r\nروشنایی : ٣٠٠٠ لومن\r\nرنگ LED : سفید ٦٥٠٠-٧٠٠٠ كلوین\r\nولتاژ ورودی : ١٢-٢٤ ولت\r\nفن ندارد', 6, '٦٦٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد', ''),
+(21, 'هدلایتMC1-1', '008', 'قدرت : ٣٠وات\r\nتعداد و نوع LED : ٢عدد COB\r\nروشنایی : ٣٠٠٠ لومن\r\nرنگ LED : سفید ٦٥٠٠-٧٠٠٠ كلوین\r\nولتاژ ورودی : ١٢-٢٤ ولت\r\nفن ندارد', 8, ' ٦٦٠،٠٠٠ ریال', 'هدلایت خودرو چیست؟ ال ای دی هدلایت نسل جدید سیستم روشنایی خودرو می باشد که همانند زنون دارای نوری بیش از لامپ هالوژن بوده ولی به دلیل عدم استفاده از گاز در این نوع لامپ ها نیاز به شارژ ندارد', ''),
+(22, 'دی لایت', '009', 'دی لایت ٢٤ ولت ٦٠٠٠ كلوین\r\n', 7, ' ١٩٠،٠٠٠ ریال', 'دی لایت فیبر نوری طرح L با نوری بسیار درخشنده و خیره کننده.\r\nدی لایت به منظور جلب توجه عابرین پیاده و سایر خودرو ها در روز و شب مورد استفاده قرار میگیرد.\r\nنصب:\r\nقابل نصب در تمام خودرو ها\r\nنصب در داخل کاسه چراغ و بر روی سپر\r\nنصب به وسیله چسب دوطرفه\r\nمشخصات:\r\nضد آب\r\nنمونه درجه 1\r\nضخامت 5 میلیمتر\r\nدارای نور سفید(یخی) یکنواخت و یکدست\r\nهر بسته شامل 2 عدد دی لایت می باشد\r\nعمر مفید 50,000 ساعت\r\nبدون نویز و ارور در خودرو های روز دنیا', ''),
+(23, 'دی لایت', '010', 'دی لایت ٢٤ ولت ٦٠٠٠ كلوین ', 5, '٣٣٠،٠٠٠ ریال', 'دی لایت فیبر نوری طرح L با نوری بسیار درخشنده و خیره کننده.\r\nدی لایت به منظور جلب توجه عابرین پیاده و سایر خودرو ها در روز و شب مورد استفاده قرار میگیرد.\r\nنصب:\r\nقابل نصب در تمام خودرو ها\r\nنصب در داخل کاسه چراغ و بر روی سپر\r\nنصب به وسیله چسب دوطرفه\r\nمشخصات:\r\nضد آب\r\nنمونه درجه 1\r\nضخامت 5 میلیمتر\r\nدارای نور سفید(یخی) یکنواخت و یکدست\r\nهر بسته شامل 2 عدد دی لایت می باشد\r\nعمر مفید 50,000 ساعت\r\nبدون نویز و ارور در خودرو های روز دنیا', ''),
+(24, 'لیزر فوگ لایت', '012', 'طول 20mm\r\nعرض 15mm\r\nارتفاع 20mm\r\nولتاژ 12v\r\nتوان(وات) 0.7w\r\nضد آب هست\r\n', 5, '٢٩٠،٠٠٠ ریال', 'لیزر لایت در جاده های بارانی و مه آلود و همینطور جاده های تاریک به کمک شما آمده تا حریم امن پشت سر خود را برای سایر رانندگان مشخص کنید و باعث حفظ رعایت فاصله طولی شده که به ندرت در کشور ما رعایت می شود.\r\nرانندگان در هنگام تصادف از عقب کمترین نقش ممکن را داشته و این وسیله موجب هشدار به رانندگان پشت سر شما به منظور جلوگیری از نزدیک شدن بیش از حد به شما می شود.\r\nاین قطعه بسیار کوچک بوده و تقریبا اندازه یک دوربین دنده عقب است. در پشت خودرو می تواند در بالای پلاک یا زیر سپر و هر محل مناسبی بوسیله پیچ های 1 میل خود دستگاه نصب شود.\r\nنصب آسان و بسیار با دوام.\r\nپخش توسط آپشن بصورت انحصاری\r\nدارای توان خروجی 0.7 وات', '');
 
 -- --------------------------------------------------------
 
@@ -158,7 +174,7 @@ CREATE TABLE `irtoya_staff` (
 -- Table structure for table `mailq`
 --
 
-CREATE TABLE `mailq` (
+CREATE TABLE IF NOT EXISTS `mailq` (
   `id` int(11) NOT NULL,
   `to` text COLLATE utf8_persian_ci NOT NULL,
   `subject` text COLLATE utf8_persian_ci NOT NULL,
@@ -173,7 +189,7 @@ CREATE TABLE `mailq` (
 -- Table structure for table `news`
 --
 
-CREATE TABLE `news` (
+CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL,
   `name` text COLLATE utf8_persian_ci NOT NULL,
   `text` text COLLATE utf8_persian_ci NOT NULL,
@@ -181,7 +197,16 @@ CREATE TABLE `news` (
   `visit` int(11) NOT NULL,
   `pic` text COLLATE utf8_persian_ci NOT NULL,
   `tag` text COLLATE utf8_persian_ci NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `name`, `text`, `date`, `visit`, `pic`, `tag`) VALUES
+(1, 'تصمیم لندن برای گرم کردن خانه‌ها با گرمای مترو', '<p>هرکسی که سری به متروهای لندن زده باشد، احتمالا می&zwnj;داند که حرارت زیادی در آنجا وجود دارد، حتی در زمستان. این گرمای مجود در فضای زیر زمین هدر می&zwnj;رود درحالیکه انسان&zwnj;های بالای آن، برای گرم کردن خانه&zwnj;های خود با دشواری&zwnj;های خاصی مواجه هستند. این مسئله یک یده را به دنبال خود داشته است: &ldquo;<strong>استحصال انرژی گرمایی تونل&zwnj;های مترو برای گرم کردن ساکنان لندن</strong>&ldquo;.</p>', 125, 158, '', '454'),
+(2, 'همکاری دانشگاه Politècnica de Catalunya در اسپانیا و شرکت Eolgreen منجر به طراحی و ساخت پایه های روشنایی ترکیبی با استفاده از انرژی باد و خورشید گردید.', '<p>ارتفاع این پایه ها معادل 10 متر ( 32.8 فوت) و سستم روشنایی آن توسط LED می باشد. جنس پره های توربین بادی در بالای چراغ از نوع کامپوزیت بوده و تولید برق با سرعت حداقل باد در حدود 1.7 متر بر ثانیه (5.6 ft) می باشد.</p>\r\n<p>حداکثر توان خروجی با سرعت توربین بین 10 تا 200 دور در دقیقه (RPM) در حدود 400 وات می باشد.</p>', 1479064845, 2, '', ''),
+(3, 'افتتاح بزرگ‌ترین نیروگاه خورشیدی فراساحلی در ژاپن', '<p dir="rtl">شرکت <a href="http://global.kyocera.com/news/2013/1101_nnms.html" target="_blank" rel="nofollow"><strong>Kyocera</strong></a> به تازگی&nbsp; طرح ایجاد بزرگ&zwnj;ترین<a href="http://ecogeek.ir/tag/solar-power-plant/" target="_blank"> نیروگاه خورشیدی </a>فراساحلی ژاپن را آغاز کرده است.<a href="http://ecogeek.ir/" target="_blank">انرژی پاک</a> تولید شده توسط نیروگاه 70 مگاواتی کاگوشیما ناناتسوجیما از طریق یک شرکت محلی برق، به شبکه برق ملی فروخته خواهد شد. با اینکه <a href="http://ecogeek.ir/category/energy/solar-energy-news/" target="_blank">انرژی خورشیدی</a> در مقیاس مفید در اول نوامبر 2013 راه افتاد ولی به طور رسمی در چهارم نوامبر افتتاح شد.</p>\r\n<p dir="rtl">Kyocera&nbsp; با همکاری شش شرکت دیگر برای راه اندازی این نیروگاه همکاری کرده است. این شرکت امیدوار است که این ریسک اخیر فراساحلی نمونه&zwnj;ای برای ژاپنی تمیزتر باشد. این نیروگاه خورشیدی طراحی شده تا ژاپن را به استفاده هرچه بیشتر از منابع انرژی&zwnj;های نو تشویق کند.</p>\r\n<p dir="rtl">ایجاد این نیروگاه به علت تجدید نظر در برنامه تعرفه تغذیه به شبکه برق (FIT= feed in tariff) ژاپن ممکن شد که در جولای 2012 بازسازی شد و به موجب آن، انرژی خورشیدی توانست جایگاه بهتری پیدا کند. تنظیمات تغذیه به شبکه برق، تجهیزات محلی را ملزم می&zwnj;کند تا 100 درصد انرژی حاصل از نیروگاه&zwnj;های خورشیدی که بیش از 10 کیلووات تولید می&zwnj;کنند را خریداری نمایند.</p>', 1479149142, 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -189,7 +214,7 @@ CREATE TABLE `news` (
 -- Table structure for table `orders`
 --
 
-CREATE TABLE `orders` (
+CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL,
   `uid` int(11) NOT NULL,
   `date` int(11) NOT NULL,
@@ -205,7 +230,7 @@ CREATE TABLE `orders` (
 -- Table structure for table `orders_item`
 --
 
-CREATE TABLE `orders_item` (
+CREATE TABLE IF NOT EXISTS `orders_item` (
   `id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -219,12 +244,12 @@ CREATE TABLE `orders_item` (
 -- Table structure for table `texty`
 --
 
-CREATE TABLE `texty` (
+CREATE TABLE IF NOT EXISTS `texty` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'عنوان لاتین',
   `name_fa` text COLLATE utf8_persian_ci NOT NULL COMMENT 'عنوان فارسی',
   `content` text COLLATE utf8_persian_ci NOT NULL COMMENT 'محتوا'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `texty`
@@ -243,7 +268,7 @@ INSERT INTO `texty` (`id`, `name`, `name_fa`, `content`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
@@ -252,7 +277,7 @@ CREATE TABLE `users` (
   `tell` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `cell` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `wallet_credit` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `users`
@@ -267,7 +292,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `permission`, `name`, `tell`,
 -- Table structure for table `_links`
 --
 
-CREATE TABLE `_links` (
+CREATE TABLE IF NOT EXISTS `_links` (
   `_id` int(12) NOT NULL,
   `_url` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `_title` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
@@ -275,7 +300,7 @@ CREATE TABLE `_links` (
   `_priority` int(1) NOT NULL DEFAULT '0',
   `_status` int(1) NOT NULL DEFAULT '0',
   `parent` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_links`
@@ -284,9 +309,7 @@ CREATE TABLE `_links` (
 INSERT INTO `_links` (`_id`, `_url`, `_title`, `_type`, `_priority`, `_status`, `parent`) VALUES
 (9, './about', 'درباره ما', 'index', 7, 1, 0),
 (10, './contact', 'ارتباط با ما', 'index', 6, 1, 0),
-(11, '#', 'محصولات', 'index', 1, 1, 0),
 (12, './orders-basket-confirm', 'سبد خرید', 'index', 4, 1, 0),
-(13, './?page=108', 'محصولات', 'index', 5, 1, 0),
 (15, './news', 'اخبار سایت', 'index', 3, 1, 0);
 
 -- --------------------------------------------------------
@@ -295,13 +318,13 @@ INSERT INTO `_links` (`_id`, `_url`, `_title`, `_type`, `_priority`, `_status`, 
 -- Table structure for table `_pages`
 --
 
-CREATE TABLE `_pages` (
+CREATE TABLE IF NOT EXISTS `_pages` (
   `_page` int(11) NOT NULL,
   `_title` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `meta_title` text COLLATE utf8_persian_ci NOT NULL COMMENT 'عنوان صفحه',
   `meta_kw` text COLLATE utf8_persian_ci NOT NULL COMMENT 'کلمات کلیدی',
   `meta_desc` text COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=160 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_pages`
@@ -314,7 +337,7 @@ INSERT INTO `_pages` (`_page`, `_title`, `meta_title`, `meta_kw`, `meta_desc`) V
 (3, 'درباره ما', '', '', ''),
 (4, 'راهنمای سایت', '', '', ''),
 (5, 'آموزش', '', '', ''),
-(6, 'قوانین و مقرارت خودروپارس', '', '', ''),
+(6, 'قوانین و مقرارت نورین مدار', '', '', ''),
 (7, 'ضوابط حفظ حریم خصوصی', '', '', ''),
 (153, 'خدمات پس از فروش', '', '', ''),
 (154, 'نمایندگی ها', '', '', ''),
@@ -331,7 +354,8 @@ INSERT INTO `_pages` (`_page`, `_title`, `meta_title`, `meta_kw`, `meta_desc`) V
 (63, 'فراموشی کلمه عبور', '', '', ''),
 (14, 'محیط کاربری', '', '', ''),
 (51, 'اخبار سایت', '', '', ''),
-(52, 'نمایش خبر', '<?\r\necho news_meta( "title" );\r\n?>', '<?\r\necho news_meta( "kw" );\r\n?>', '<?\r\necho news_meta( "desc" );\r\n?>');
+(52, 'نمایش خبر', '<?\r\necho news_meta( "title" );\r\n?>', '<?\r\necho news_meta( "kw" );\r\n?>', '<?\r\necho news_meta( "desc" );\r\n?>'),
+(159, 'محصولات', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -339,7 +363,7 @@ INSERT INTO `_pages` (`_page`, `_title`, `meta_title`, `meta_kw`, `meta_desc`) V
 -- Table structure for table `_page_frames`
 --
 
-CREATE TABLE `_page_frames` (
+CREATE TABLE IF NOT EXISTS `_page_frames` (
   `_id` int(12) NOT NULL,
   `_position` varchar(50) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `_priority` int(6) NOT NULL DEFAULT '0',
@@ -349,7 +373,7 @@ CREATE TABLE `_page_frames` (
   `_data` text COLLATE utf8_persian_ci NOT NULL,
   `_framed` int(6) NOT NULL DEFAULT '0',
   `_status` int(6) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10000007 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_page_frames`
@@ -366,7 +390,7 @@ INSERT INTO `_page_frames` (`_id`, `_position`, `_priority`, `_func`, `_type`, `
 -- Table structure for table `_page_layers`
 --
 
-CREATE TABLE `_page_layers` (
+CREATE TABLE IF NOT EXISTS `_page_layers` (
   `_id` int(11) NOT NULL,
   `_page` int(6) NOT NULL DEFAULT '0',
   `_priority` int(6) NOT NULL DEFAULT '0',
@@ -376,7 +400,7 @@ CREATE TABLE `_page_layers` (
   `_data` text COLLATE utf8_persian_ci NOT NULL,
   `_framed` int(6) NOT NULL DEFAULT '0',
   `_status` int(6) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=162 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_page_layers`
@@ -385,15 +409,15 @@ CREATE TABLE `_page_layers` (
 INSERT INTO `_page_layers` (`_id`, `_page`, `_priority`, `_func`, `_type`, `_title`, `_data`, `_framed`, `_status`) VALUES
 (2, 2, 1, 'contact_display', '', 'ارتباط با ما', '', 1, 1),
 (20, 20, 1, 'faq_display', '', 'سوالات متداول', '', 1, 1),
-(1, 1, 2, 'slidex_display', '', 'نمایش اسلاید', '', 1, 1),
+(1, 1, 2, 'slidex_display', '', 'نمایش اسلاید', '', 1, 0),
 (3, 3, 1, 'post', 'HTML', 'درباره ما', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (4, 4, 1, 'post', 'HTML', 'راهنمای سایت', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (5, 5, 1, 'post', 'HTML', 'آموزش', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
-(6, 6, 1, 'post', 'HTML', 'قوانین و مقرارت خودروپارس', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>\n', 1, 1),
+(6, 6, 1, 'post', 'HTML', 'قوانین و مقرارت نورین مدار', '<p><br /><br /></p>\r\n<center class="tx1">اين صفحه در حال طراحي ميباشد</center>\r\n<p><br /><br /></p>', 1, 1),
 (7, 7, 1, 'post', 'HTML', 'ضوابط حفظ حریم خصوصی', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (52, 52, 1, 'news_display', '', 'نمایش خبر', '', 1, 1),
 (51, 51, 1, 'news_list', '', 'اخبار سایت', '', 1, 1),
-(101, 1, 3, 'news_list_air', '', 'لیست تصویری خبر ها', '', 1, 1),
+(101, 1, 3, 'news_list', '', 'خبرها', '', 1, 1),
 (153, 153, 1, 'post', 'HTML', 'بدون عنوان', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (154, 154, 1, 'post', 'HTML', 'بدون عنوان', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (155, 155, 1, 'post', 'HTML', 'بدون عنوان', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
@@ -407,7 +431,9 @@ INSERT INTO `_page_layers` (`_id`, `_page`, `_priority`, `_func`, `_type`, `_tit
 (59, 59, 1, 'post', 'PHP5', 'ثبت نام', '<?\r\nusers_register_do();\r\n?>', 1, 1),
 (60, 60, 1, 'post', 'PHP5', 'ورود کاربر', '<?\r\nusers_login_form();\r\n?>', 1, 1),
 (63, 63, 1, 'post', 'PHP5', 'فراموشی کلمه عبور', '<?\r\nusers_forgot_form();\r\n?>', 1, 1),
-(14, 14, 1, 'post', 'PHP5', 'پنل کاربر', '<? userpanel_menu(); ?>\r\n<div class="userpanel_desk_container">\r\n    <? userpanel_desk(); ?>\r\n</div>', 1, 1);
+(14, 14, 1, 'post', 'PHP5', 'پنل کاربر', '<? userpanel_menu(); ?>\r\n<div class="userpanel_desk_container">\r\n    <? userpanel_desk(); ?>\r\n</div>', 1, 1),
+(159, 1, 4, 'is_list', 'HTML', 'محصولات', '', 1, 1),
+(161, 159, 1, 'is_list', '', 'محصولات ما', '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -415,7 +441,7 @@ INSERT INTO `_page_layers` (`_id`, `_page`, `_priority`, `_func`, `_type`, `_tit
 -- Table structure for table `_temp`
 --
 
-CREATE TABLE `_temp` (
+CREATE TABLE IF NOT EXISTS `_temp` (
   `_key` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `_val` text COLLATE utf8_persian_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
@@ -425,22 +451,22 @@ CREATE TABLE `_temp` (
 --
 
 INSERT INTO `_temp` (`_key`, `_val`) VALUES
-('main_title', 'خودرو پارس'),
+('main_title', 'نورین مدار'),
 ('money_unit', 'ریال'),
 ('template', 'Default'),
-('cu_company_tell', '(071) 38307614 - 38317000- 38202904'),
-('cu_company_fax', '(071) 38307614'),
-('cu_company_addr', 'شیراز  - بلوار امیر کبیر - روبروی پمپ گاز '),
-('websitedescription', 'فروش خودرو'),
-('keywords', 'خودرو,ماشین,تولید,بازار'),
-('about', 'تمامی حقوق برای مجموعه خودروپارس محفوظ است'),
-('email_address_webadmin', 'info@khodropars.com'),
-('email_address_management', 'admin@khodropars.com'),
-('email_address_sell', 'sales@khodropars.com'),
-('email_address_support', 'support@khodropars.com'),
+('cu_company_tell', '(021('),
+('cu_company_fax', '(021)'),
+('cu_company_addr', 'تهران'),
+('websitedescription', 'فروش قطعات'),
+('keywords', 'قطعه,ماشین,تولید,بازار'),
+('about', 'تمامی حقوق برای مجموعه نورین مدار محفوظ است'),
+('email_address_webadmin', 'info@norinmadar.com'),
+('email_address_management', 'admin@norinmadar.com'),
+('email_address_sell', 'sales@norinmadar.com'),
+('email_address_support', 'support@norinmadar.com'),
 ('sms_state', '1'),
 ('webstatus_main', '1'),
-('unsuccessful_attack', '182'),
+('unsuccessful_attack', '191'),
 ('security_number', '671432'),
 ('user_noaccess_delay', '3600'),
 ('user_max_access', '200'),
@@ -487,9 +513,7 @@ ALTER TABLE `faq`
 -- Indexes for table `irtoya_staff`
 --
 ALTER TABLE `irtoya_staff`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `code` (`code`),
-  ADD UNIQUE KEY `code_2` (`code`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `code` (`code`), ADD UNIQUE KEY `code_2` (`code`);
 
 --
 -- Indexes for table `mailq`
@@ -519,15 +543,13 @@ ALTER TABLE `orders_item`
 -- Indexes for table `texty`
 --
 ALTER TABLE `texty`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `name` (`name`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `_links`
@@ -572,12 +594,12 @@ ALTER TABLE `billing_invoice`
 -- AUTO_INCREMENT for table `billing_method`
 --
 ALTER TABLE `billing_method`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `cat`
 --
 ALTER TABLE `cat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `comments`
 --
@@ -587,12 +609,12 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `irtoya_staff`
 --
 ALTER TABLE `irtoya_staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `mailq`
 --
@@ -602,7 +624,7 @@ ALTER TABLE `mailq`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `orders`
 --
@@ -617,32 +639,32 @@ ALTER TABLE `orders_item`
 -- AUTO_INCREMENT for table `texty`
 --
 ALTER TABLE `texty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `_links`
 --
 ALTER TABLE `_links`
-  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `_pages`
 --
 ALTER TABLE `_pages`
-  MODIFY `_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `_page` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=160;
 --
 -- AUTO_INCREMENT for table `_page_frames`
 --
 ALTER TABLE `_page_frames`
-  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10000007;
+  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10000007;
 --
 -- AUTO_INCREMENT for table `_page_layers`
 --
 ALTER TABLE `_page_layers`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=162;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
