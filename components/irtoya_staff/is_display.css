@@ -8,11 +8,14 @@
 }
 .is_display .pics {
 	display: inline-block;
-	width: 40%;
+	width: 30%;
+	border-radius: 5px;
 }
 .is_display .pics img.main {
 	border-radius: 5px;
 	vertical-align: top;
+	width: 90%;
+
 }
 .is_display .pics .tiny {
 }
@@ -23,15 +26,14 @@
 	margin: 0 2px;
 }
 .is_display .text {
-	width: 25%;
-	height: 300px;
+	width:30%;
 	
+	height: 300px;
 	display: inline-block;
 	vertical-align: top;
-	text-align: right;
 	direction: rtl;
 	margin: 0px 0px 0px 0px;
-	margin-right: -48px;
+	padding-top: 10px;
 }
 .model{
 	
@@ -82,18 +84,19 @@
 	word-break:break-all;
 }
 .orders_basket_addbutton {
-	width: auto !important;
+
+	width: 100% !important;
 	padding: 8px 15px 5px 15px !important;
 	background-color: #A90000 !important;
 	display: inline-block !important;
 	position: relative !important;
+	
 }
 .orders_basket_addbutton:hover {
 	opacity: 0.8 !important;
 }
-
-
-
+.sabad-send{
+}
 
 
 

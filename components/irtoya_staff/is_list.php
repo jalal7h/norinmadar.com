@@ -37,13 +37,10 @@ function is_list_this( $rw ){
 
 	$path = "data/autoparts/".$rw['id'];
 	if(!$list = fileupload_filelist($path)){
-		$list[0] = 'image.list/is-no-pic.jpg';
+		$list[0] = 'image.list/is-no-pic.png';
 	}
 	for($i=1; $i<sizeof($list) and $i<5; $i++){
 		$tinypics.= "<img src='resize/100x100/".$list[$i]."' />\n";
-	}
-	for(    ; $i<5; $i++){
-		$tinypics.= "<img src='image.list/is-no-pic.jpg' />\n";
 	}
 
 	$c.= "

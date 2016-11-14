@@ -47,13 +47,15 @@ function news_list_this( $rw ){
 			}
 			$tag = "کلمات کلیدی: ".implode(" , ", $tag_arr);
 		}
-
+		if(!$list = fileupload_filelist($path)){
+			$list[0] = 'image.list/174240.png';
+		}
 	}
 	$c = '
 	<div class="r" >
 
 		<a href="'.$link.'" class="r" >
-			<img src="resize/310x224/'.$rw['pic'].'" />
+			<img src="'.$list[0].'" />
 			<div class="visit">'.$rw['visit'].' بازدید</div>
 			<div class="name">'.$rw['name'].'</div>
 		</a>

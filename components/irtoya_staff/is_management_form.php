@@ -25,6 +25,8 @@ function is_management_form(){
 		
 		ff(array("مشخصات فنی",'t:textarea','n:technical_features'=>$rw,'inDiv')).
 		
+		ff(array('دسته بندی','n:cat*'=>$rw,'option'=>cat_display('main'),'inDiv')).
+		
 		ff(array("تعداد",'n:number'=>$rw,'inDiv')).
 		
 		ff(array("قیمت",'n:price'=>$rw,'inDiv')).

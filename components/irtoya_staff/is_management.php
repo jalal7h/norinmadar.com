@@ -12,6 +12,7 @@ function is_management(){
 		$_REQUEST['cp']."_list" => "لیست قطعات",
 		$_REQUEST['cp']."_form" => "ثبت قطعه جدید",
 		$_REQUEST['cp']."_import_form" => "خروجی اکسل",
+		"cat_management&l=main" => "دسته بندی",
 	);
 	listmaker_tabmenu($menu,$url);
 }
@@ -25,5 +26,6 @@ $GLOBALS['irtoya_staff_order_of_columns'] = array(
 	'price',
 	'desc',
 	'technical_features',
+	'cat',
 );
 

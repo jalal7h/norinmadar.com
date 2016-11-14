@@ -14,7 +14,7 @@ function is_display(){
 		
 		$path = "data/autoparts/".$rw['id'];
 		if(!$list = fileupload_filelist($path)){
-			$list[0] = 'image.list/is-no-pic.jpg';
+			$list[0] = 'image.list/is-no-pic.png';
 		}
 		
 
@@ -27,10 +27,9 @@ function is_display(){
 			</div>
 			<div class='text'>
 				<div class='name'><span>".lmtc("irtoya_staff:code")." : </span>".$rw['code']."</div>
-				<div class='brand' ><span>نام محصول : </span>".$rw['name']." , ".$rw['brand_en']."</div>
 				<div class='model' ><span>قیمت  : </span>".$rw['price']." , ".$rw['model_en']."</div>
 				<br>
-				".is_display_form( $rw )."
+				
 			</div>
 			
 			".($rw['desc'] ?"
@@ -40,6 +39,7 @@ function is_display(){
 			
 				<div>".lmtc("irtoya_staff:technical_features")." : </div>
 				<p class='p-dec'>".$rw['technical_features']."</p>
+			".is_display_form( $rw )."
 			</div>
 			" :"")."
 
