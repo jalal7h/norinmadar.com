@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 15, 2016 at 01:40 AM
+-- Generation Time: Nov 16, 2016 at 01:13 AM
 -- Server version: 5.6.28-0ubuntu0.15.04.1
 -- PHP Version: 5.6.4-4ubuntu6.4
 
@@ -152,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `irtoya_staff` (
   `price` text COLLATE utf8_persian_ci NOT NULL COMMENT 'قیمت',
   `desc` text COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات',
   `autoparts` text COLLATE utf8_persian_ci NOT NULL COMMENT 'عکس'
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `irtoya_staff`
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 INSERT INTO `news` (`id`, `name`, `text`, `date`, `visit`, `pic`, `tag`) VALUES
 (1, 'تصمیم لندن برای گرم کردن خانه‌ها با گرمای مترو', '<p>هرکسی که سری به متروهای لندن زده باشد، احتمالا می&zwnj;داند که حرارت زیادی در آنجا وجود دارد، حتی در زمستان. این گرمای مجود در فضای زیر زمین هدر می&zwnj;رود درحالیکه انسان&zwnj;های بالای آن، برای گرم کردن خانه&zwnj;های خود با دشواری&zwnj;های خاصی مواجه هستند. این مسئله یک یده را به دنبال خود داشته است: &ldquo;<strong>استحصال انرژی گرمایی تونل&zwnj;های مترو برای گرم کردن ساکنان لندن</strong>&ldquo;.</p>', 125, 158, '', '454'),
 (2, 'همکاری دانشگاه Politècnica de Catalunya در اسپانیا و شرکت Eolgreen منجر به طراحی و ساخت پایه های روشنایی ترکیبی با استفاده از انرژی باد و خورشید گردید.', '<p>ارتفاع این پایه ها معادل 10 متر ( 32.8 فوت) و سستم روشنایی آن توسط LED می باشد. جنس پره های توربین بادی در بالای چراغ از نوع کامپوزیت بوده و تولید برق با سرعت حداقل باد در حدود 1.7 متر بر ثانیه (5.6 ft) می باشد.</p>\r\n<p>حداکثر توان خروجی با سرعت توربین بین 10 تا 200 دور در دقیقه (RPM) در حدود 400 وات می باشد.</p>', 1479064845, 2, '', '8787'),
-(3, 'افتتاح بزرگ‌ترین نیروگاه خورشیدی فراساحلی در ژاپن', '<p dir="rtl">شرکت <a href="http://global.kyocera.com/news/2013/1101_nnms.html" target="_blank" rel="nofollow"><strong>Kyocera</strong></a> به تازگی&nbsp; طرح ایجاد بزرگ&zwnj;ترین<a href="http://ecogeek.ir/tag/solar-power-plant/" target="_blank"> نیروگاه خورشیدی </a>فراساحلی ژاپن را آغاز کرده است.<a href="http://ecogeek.ir/" target="_blank">انرژی پاک</a> تولید شده توسط نیروگاه 70 مگاواتی کاگوشیما ناناتسوجیما از طریق یک شرکت محلی برق، به شبکه برق ملی فروخته خواهد شد. با اینکه <a href="http://ecogeek.ir/category/energy/solar-energy-news/" target="_blank">انرژی خورشیدی</a> در مقیاس مفید در اول نوامبر 2013 راه افتاد ولی به طور رسمی در چهارم نوامبر افتتاح شد.</p>\r\n<p dir="rtl">Kyocera&nbsp; با همکاری شش شرکت دیگر برای راه اندازی این نیروگاه همکاری کرده است. این شرکت امیدوار است که این ریسک اخیر فراساحلی نمونه&zwnj;ای برای ژاپنی تمیزتر باشد. این نیروگاه خورشیدی طراحی شده تا ژاپن را به استفاده هرچه بیشتر از منابع انرژی&zwnj;های نو تشویق کند.</p>\r\n<p dir="rtl">ایجاد این نیروگاه به علت تجدید نظر در برنامه تعرفه تغذیه به شبکه برق (FIT= feed in tariff) ژاپن ممکن شد که در جولای 2012 بازسازی شد و به موجب آن، انرژی خورشیدی توانست جایگاه بهتری پیدا کند. تنظیمات تغذیه به شبکه برق، تجهیزات محلی را ملزم می&zwnj;کند تا 100 درصد انرژی حاصل از نیروگاه&zwnj;های خورشیدی که بیش از 10 کیلووات تولید می&zwnj;کنند را خریداری نمایند.</p>', 1479149142, 1, '', '5454');
+(3, 'افتتاح بزرگ‌ترین نیروگاه خورشیدی فراساحلی در ژاپن', '<p dir="rtl">شرکت <a href="http://global.kyocera.com/news/2013/1101_nnms.html" target="_blank" rel="nofollow"><strong>Kyocera</strong></a> به تازگی&nbsp; طرح ایجاد بزرگ&zwnj;ترین<a href="http://ecogeek.ir/tag/solar-power-plant/" target="_blank"> نیروگاه خورشیدی </a>فراساحلی ژاپن را آغاز کرده است.<a href="http://ecogeek.ir/" target="_blank">انرژی پاک</a> تولید شده توسط نیروگاه 70 مگاواتی کاگوشیما ناناتسوجیما از طریق یک شرکت محلی برق، به شبکه برق ملی فروخته خواهد شد. با اینکه <a href="http://ecogeek.ir/category/energy/solar-energy-news/" target="_blank">انرژی خورشیدی</a> در مقیاس مفید در اول نوامبر 2013 راه افتاد ولی به طور رسمی در چهارم نوامبر افتتاح شد.</p>\r\n<p dir="rtl">Kyocera&nbsp; با همکاری شش شرکت دیگر برای راه اندازی این نیروگاه همکاری کرده است. این شرکت امیدوار است که این ریسک اخیر فراساحلی نمونه&zwnj;ای برای ژاپنی تمیزتر باشد. این نیروگاه خورشیدی طراحی شده تا ژاپن را به استفاده هرچه بیشتر از منابع انرژی&zwnj;های نو تشویق کند.</p>\r\n<p dir="rtl">ایجاد این نیروگاه به علت تجدید نظر در برنامه تعرفه تغذیه به شبکه برق (FIT= feed in tariff) ژاپن ممکن شد که در جولای 2012 بازسازی شد و به موجب آن، انرژی خورشیدی توانست جایگاه بهتری پیدا کند. تنظیمات تغذیه به شبکه برق، تجهیزات محلی را ملزم می&zwnj;کند تا 100 درصد انرژی حاصل از نیروگاه&zwnj;های خورشیدی که بیش از 10 کیلووات تولید می&zwnj;کنند را خریداری نمایند.</p>', 1479149142, 2, '', '5454');
 
 -- --------------------------------------------------------
 
@@ -303,7 +303,7 @@ CREATE TABLE IF NOT EXISTS `_links` (
   `_priority` int(1) NOT NULL DEFAULT '0',
   `_status` int(1) NOT NULL DEFAULT '0',
   `parent` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_links`
@@ -312,7 +312,9 @@ CREATE TABLE IF NOT EXISTS `_links` (
 INSERT INTO `_links` (`_id`, `_url`, `_title`, `_type`, `_priority`, `_status`, `parent`) VALUES
 (9, './about', 'درباره ما', 'index', 7, 1, 0),
 (10, './contact', 'ارتباط با ما', 'index', 6, 1, 0),
+(17, './product', 'محصولات', 'index', 9, 1, 0),
 (12, './orders-basket-confirm', 'سبد خرید', 'index', 4, 1, 0),
+(16, './register', 'ثبت نام', 'index', 8, 1, 0),
 (15, './news', 'اخبار سایت', 'index', 3, 1, 0);
 
 -- --------------------------------------------------------
@@ -345,10 +347,10 @@ INSERT INTO `_pages` (`_page`, `_title`, `meta_title`, `meta_kw`, `meta_desc`) V
 (153, 'خدمات پس از فروش', '', '', ''),
 (154, 'نمایندگی ها', '', '', ''),
 (155, 'امور مشتریان', '', '', ''),
-(156, 'نمایش خودرو', '<?\r\necho irtoya_meta( "title" );\r\n?>', '<?\r\necho irtoya_meta( "kw" );\r\n?>', '<?\r\necho irtoya_meta( "desc" );\r\n?>'),
-(157, 'مقایسه خودرو', '', '', ''),
+(156, 'نمایش محصول', '<?\r\necho irtoya_meta( "title" );\r\n?>', '<?\r\necho irtoya_meta( "kw" );\r\n?>', '<?\r\necho irtoya_meta( "desc" );\r\n?>'),
+(157, 'مقایسه محصول', '', '', ''),
 (158, 'تویوتا کمری هایبرید', '', '', ''),
-(108, 'فروشگاه قطعات خودرو', '', '', ''),
+(108, 'محصولات ما', '', '', ''),
 (109, 'نمایش قطعه', '<?\r\necho is_meta( "title" );\r\n?>', '<?\r\necho is_meta( "kw" );\r\n?>', '<?\r\necho is_meta( "desc" );\r\n?>'),
 (66, 'سبد خرید', '', '', ''),
 (58, 'ثبت نام', '', '', ''),
@@ -424,10 +426,10 @@ INSERT INTO `_page_layers` (`_id`, `_page`, `_priority`, `_func`, `_type`, `_tit
 (153, 153, 1, 'post', 'HTML', 'بدون عنوان', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (154, 154, 1, 'post', 'HTML', 'بدون عنوان', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (155, 155, 1, 'post', 'HTML', 'بدون عنوان', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
-(156, 156, 1, 'irtoya_display', '', 'نمایش خودرو', '', 1, 1),
-(157, 157, 1, 'post', 'PHP5', 'مقایسه خودرو', '<?\r\nirtoya_compare();\r\n?>', 1, 1),
+(156, 156, 1, 'irtoya_display', '', 'نمایش محصول', '', 1, 1),
+(157, 157, 1, 'post', 'PHP5', 'مقایسه محصول', '<?\r\nirtoya_compare();\r\n?>', 1, 1),
 (158, 158, 1, 'post', 'HTML', 'نقد و بررسی: تویوتا کمری هایبرید ۲۰۱۵', '<!DOCTYPE html>\r\n<html>\r\n<head>\r\n</head>\r\n<body>\r\n<p style="text-align: right;"><span style="font-size: 12px;">در نگاه اول سه دلیل برای دوست داشتن این خودرو به ذهن می&zwnj;آید. اول این&zwnj;که استایل جدید front-end که تویوتا در آن به&zwnj;کاربرده است خوب به نظر می&zwnj;آید. دوم آنکه سیستم استریو JBL GreenEdge برای گوش دادن موسیقی و حتی پاسخ دادن به تماس&zwnj;های تلفن همراه نیز بسیار خوب عمل می&zwnj;کند , سوم آنکه فرمان پذیری این مدل از تویوتا بسیار بهینه&zwnj;تر از مدل&zwnj;های قبلی شده است.<img class="aligncenter size-full wp-image-3808" src="uploads/2015toyotacamry-004.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="506" /></span></p>\r\n<p style="text-align: right;"><span style="font-size: 12px;">البته در طول یک&zwnj;هفته&zwnj;ای که توانستیم این خودرو را از نزدیک بررسی کنیم دلایل متعدد دیگری نیز در این خصوص یافتیم که در ادامه بیشتر آن&zwnj;ها را بررسی خواهیم کرد؛ &nbsp;درواقع باید گفت که این آن تویوتا کمری نیست که به دنبالش بودید.<img class="aligncenter size-full wp-image-3816" src="uploads/2015toyotacamry-015.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="506" /></span></p>\r\n<p style="text-align: right;"><span style="font-size: 12px;">در تویوتا کمری مدل ۲۰۱۵ به&zwnj;روزرسانی&zwnj;های بسیار مهمی نسبت به سایر سدان ها میان اندازه تویوتا صورت گرفته است. این خودرو جدید دارای یک دستیار راننده جدید نیز هست که باعث می&zwnj;شود بتوانید ارتباط بهتری با Entune، سیستم یکپارچه نرم&zwnj;افزاری تویوتا داشته باشید. البته انتخاب&zwnj;های driveline تغییرات زیادی نکرده&zwnj;اند.</span></p>\r\n<h3 style="text-align: right;"><strong><span style="font-size: 12px;">به دنیای نرم&zwnj;افزار خوش&zwnj;آمدید</span></strong></h3>\r\n<p style="text-align: right;"><span style="font-size: 12px;">صفحه&zwnj;نمایش بزرگی ال سی دی در وسط داشبورد قرار دارد که کار با آن بسیار راحت است. البته باوجوداینکه تویوتا در لیست آپشن های خودرو به&zwnj;صراحت ذکر کرده است که این خودرو مجهز به Entune Premium JBL Audio with Navigation App Suite است اما کلید مربوط به ناوبری در آن دیده نمی&zwnj;شود. به&zwnj;جای آن کلید بزرگی به نام Apps وجود دارد که درواقع اصطلاح جدید ابداعی تویوتا برای انواع فناوری&zwnj;های نرم افزاری است که در اتاق خودرو از آن استفاده&zwnj;شده است.<img class="aligncenter size-full wp-image-3820" src="uploads/2015toyotacamry-020.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="506" /></span></p>\r\n<p style="text-align: right;"><span style="font-size: 12px;">با زدن این کلید سه صفحه آیکون را روبروی خود خواهید دید و زمانی که از طریق گوشی خودم به Entune متصل شدم توانستم بخش ناوبری را نیز در میان آن&zwnj;ها پیدا کنم. درواقع با این کار امکان حذف و اضافه نرم&zwnj;افزارها و امکانات به انواع خودروهای کمری تویوتا افزوده می&zwnj;شود که به&zwnj;این&zwnj;ترتیب نیاز به طراحی کلیدهای فیزیکی نیز در این خصوص دیده نمی&zwnj;شود.&nbsp;به نظر می&zwnj;رسد سیستم ناوبری این مدل نسبت به نسل قبلی کمری به&zwnj;روزتر شده باشد. اعلان&zwnj;های مربوط به ترافیک، تغییر مسیرهای برنامه&zwnj;ریزی&zwnj;شده، راهنمای مسیر، بهبودهای گرافیکی و مواردی ازاین&zwnj;دست همگی بهبودهای بسیار خوبی پیداکرده&zwnj;اند.<img class="aligncenter size-full wp-image-3825" src="uploads/2015toyotacamry-027.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="506" /></span></p>\r\n<p style="text-align: right;"><span style="font-size: 12px;">تمام برنامه&zwnj;هایی که در صفحه&zwnj;نمایش ال سی دی لمس می&zwnj;کنید به سرعت اجرا می&zwnj;شوند و کندی در اجرای آن&zwnj;ها دیده نمی&zwnj;شود. سازمان&zwnj;دهی و دسته&zwnj;بندی آیکون&zwnj;ها خوب انجام&zwnj;شده است با این&zwnj;که گرافیک آن&zwnj;ها هنوز جای کار بیشتری دارد. البته امکان سفارشی&zwnj;سازی نمایش این آیکون&zwnj;ها نیز وجود دارد.<img class="aligncenter size-full wp-image-3830" src="uploads/2015toyotacamry-036.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="505" /></span></p>\r\n<p style="text-align: right;"><span style="font-size: 12px;">تویوتا سامانه فرمان صوتی را هم در بخش Entune و هم در فرمان خودرو قرار داده است که با توجه به نوع زبان راننده به&zwnj;خوبی می&zwnj;تواند فرمان&zwnj;ها را دریافت و پردازش کند. از سوی دیگر سیستم یکپارچه Entune که تویوتا ارائه کرده است از طریق نصب اپلیکیشن های مخصوص آن در اندروید و iOS و حتی اتصال از طریق بلوتوث نیز به&zwnj;راحتی قابل&zwnj;کنترل و کار است. با این کار می&zwnj;توانیم از نرم&zwnj;افزارهایی چون Bing search, OpenTable, Yelp و HeartRadio در صفحه&zwnj;نمایش لمسی خودرو خود استفاده کنیم. باید گفت که نسل قبلی تویوتا کمری نیز به سیستم یکپارچه Entune مجهز بود اما بسیار خسته&zwnj;کننده و فاقد کار آیی لازم بود، مسئله ای که در نسل جدید تویوتا کمری با اعمال به&zwnj;روزرسانی&zwnj;ها و تغییر رابط کاربری به&zwnj;خوبی رفع شده است.</span></p>\r\n<p style="text-align: right;"><span style="font-size: 12px;"><a href="http://bamanbekhar.com/wp-content/uploads/2015/03/2015toyotacamry-044.jpg"><img class="aligncenter size-full wp-image-3833" src="uploads/2015toyotacamry-044.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="507" /></a></span></p>\r\n<p style="text-align: right;">&nbsp;</p>\r\n<p style="text-align: right;"><span style="font-size: 12px;">اما جالب&zwnj;تر آنکه بسیاری از اپلیکیشن ها با سیستم ناوبری خودرو در ارتباط هستند، به&zwnj;طور مثال می&zwnj;توانید کلمه&zwnj;ای را در موتور جستجوی Bing، جستجو کنید و درنهایت نتیجه&zwnj;ای را که منطبق با مسیر و یا مقصد شماست انتخاب کنید. iHeartRadio هم به شما این امکان را می&zwnj;دهد تا بین لیستی از ایستگاه&zwnj;های رادیویی بین&zwnj;المللی به جستجو بپردازید. البته در کنار این&zwnj;ها تویوتا کمری دارای تمامی آپشن های صوتی معمول چون اتصال بلوتوث، اتصال به iOS، درگاه USB و رادیو HD هست. البته بااتصال بلوتوث تنها می&zwnj;توانید از طریق صفحه&zwnj;نمایش لمسی موسیقی موردنظر خود را متوقف کنید و یا به موسیقی بعدی بروید درحالی&zwnj;که با استفاده از درگاه USB امکانات کاملی از قبلی مدیریت آلبوم&zwnj;ها را برای شنیدن موسیقی دلخواه در اختیار خواهید داشت. از سوی دیگر این مدل تویوتا کمری نخستین مدل خودرویی است که دارای پد شارژ بی&zwnj;سیم Qi است. البته نمونه&zwnj;ای دیگر هم در سال ۲۰۱۳ در Toyota Avalon به کار گرفته&zwnj;شده بود. با داشتن این پد کاربر این امکان را پیدا می&zwnj;کند تا گوشی&zwnj;هایی که از این فناوری پشتیبانی می&zwnj;کند را روی آن قرار دهد و گوشی به&zwnj;صورت بی&zwnj;سیم شارژ شود. به&zwnj;طور مثال اگر گوشی هوشمند شما آیفون است نمی&zwnj;توانید از این فناوری استفاده کنید و قبل از آن باید قاب&zwnj;های سازگار با Qi که مخصوص گوشی&zwnj;های آیفون ساخته&zwnj;شده است را تهیه کنید.</span></p>\r\n<h3 style="text-align: right;"><strong><span style="font-size: 12px;">موتور خودرو</span></strong></h3>\r\n<p style="text-align: right;"><span style="font-size: 12px;">اما کمری ۲۰۱۵ در این خصوص آن&zwnj;چنان چیز جدیدی برای ارائه ندارد. موتور ۳٫۵ لیتری V-6 با سیستم ۶ دنده&zwnj;اتوماتیک ما را به&zwnj;خوبی به یاد نسل قبلی این خودرو خواهد انداخت؛ اما یکی از بهبودهای جزئی که در این نسل قابل اشاره است مقدار fuel economy 21 mpg برای رانندگی شهری و ۳۱ mpg در بزرگراه است.<img class="aligncenter size-full wp-image-3810" src="uploads/2015toyotacamry-006.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="506" /></span></p>\r\n<p style="text-align: right;">&nbsp;</p>\r\n<p style="text-align: right;"><span style="font-size: 12px;">موتور تویوتا کمری ۲۰۱۵، ۲۶۸ اسب بخار قدرت دارد و حداکثر گشتاور آن ۲۴۸ pound-feet است. در رانندگی در بزرگراه این خودرو شتاب بسیار خوبی دارد؛ اما برگ برنده این مدل از کمری استفاده از سیستم هایبرید آن است که می&zwnj;تواند ۲۰۰ اسب بخار نیرو تولید کند و با آن به fuel economy میانگین ۴۰ mpg دستیابید. سیستم تعلیق خودرو بسیار نرم طراحی&zwnj;شده و در زمان رانندگی احساس بسیار خوبی خواهید داشت و خودرو هیچ&zwnj;گاه از کنترل راننده خارج نخواهد شد. البته تویوتا کمری یک خودروی اسپرت نیست و نباید انتظارت پایداری یک خودروی اسپرت را از آن داشت. اما دنده &zwnj;اتوماتیک این خودرو دارای دو حالت تعویض دنده خودکار معمولی و اسپرت است. البته به نظر نمی&zwnj;رسد که بسیاری از رانندگان از حالت اسپرت استفاده چندانی کنند؛ اما درست مثل بسیاری از خودروهای امروزی فرمان تویوتا کمری نیز دارای یک موتوربرقی است. موتوربرقی که در نسل های گذشته خودروهای تویوتا استفاده می&zwnj;شد سروصدای زیادی به همراه داشت که این موارد در این مدل رفع شده است. این ویژگی به&zwnj;خصوص در مسیرهای طولانی باعث عدم خستگی راننده می&zwnj;شود.<img class="aligncenter size-full wp-image-3815" src="uploads/2015toyotacamry-014.jpg" alt="۲۰۱۵ Toyota Camry" width="900" height="506" /></span></p>\r\n<p style="text-align: right;">&nbsp;</p>\r\n<p style="text-align: right;">اما مسئله جالب دیگری که در رانندگی با تویوتا کمری ۲۰۱۵ با آن روبرو خواهید شد فناوری دستیار راننده اختصاصی تویوتا است. مجموعه&zwnj;ای از امکانات که به آهستگی در حال ارائه در محصولات تویوتا هست. سیستم کروز کنترل انطباق پذیر که از فناوری رادار پیش برنده استفاده می&zwnj;کند امکانات بی&zwnj;نظیری را برای راننده فراهم می&zwnj;کند. زمانی که به ترافیک می&zwnj;رسید خودرو سرعت را با توجه به&zwnj;سرعت خودرو جلویی تنظیم می&zwnj;کند. این سیستم را در شرایط مختلف جاده و ترافیک تست کردیم و در تمامی آن&zwnj;ها سیستم به&zwnj;خوبی کار کرد.</p>\r\n<h3 style="text-align: right;"><span style="font-size: 12px;">جمع&zwnj;بندی:</span></h3>\r\n<p style="text-align: right;"><span style="font-size: 12px;">باید گفت که تویوتا کمری ۲۰۱۵ به خاطر استایل طراحی جدید، ابزارهای الکترونیکی درون اتاق خودرو و دستیار رانندگی اختصاصی تویوتا از هر نظر یک سدان محبوب به شمار می&zwnj;رود. از سوی دیگر اپلیکیشن های Entune به کاربر این امکان را می&zwnj;دهند به&zwnj;راحتی مقصد خود را پیدا کند و نزدیک&zwnj;تر ترین رستوران یا مرکز رفاهی را در مسیر خود تا رسیدن به مقصد پیدا کندو سیستم صوتی JBL GreenEdge که در این خودرو وجود دارد کیفیت صوت مطلوبی را برای این سدان میان اندازه به وجود آورده است.</span></p>\r\n</body>\r\n</html>', 1, 1),
-(108, 108, 1, 'post', 'PHP5', 'فروشگاه قطعات خودرو', '<?\r\nis_list();\r\n?>', 1, 1),
+(108, 108, 1, 'post', 'PHP5', 'محصولات ما', '<?\r\nis_list();\r\n?>', 1, 1),
 (109, 109, 1, 'post', 'PHP5', 'نمایش قطعه', '<?\r\nis_display();\r\n?>', 0, 1),
 (66, 66, 1, 'post', 'PHP5', 'سبد خرید', '<?\r\norders_basket_list();\r\n?>', 1, 1),
 (58, 58, 1, 'post', 'PHP5', 'ثبت نام', '<?\r\nusers_register_form();\r\n?>', 1, 1),
@@ -617,7 +619,7 @@ ALTER TABLE `faq`
 -- AUTO_INCREMENT for table `irtoya_staff`
 --
 ALTER TABLE `irtoya_staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `mailq`
 --
@@ -652,7 +654,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `_links`
 --
 ALTER TABLE `_links`
-  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `_pages`
 --
