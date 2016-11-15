@@ -34,7 +34,7 @@ function is_management_form(){
 		ff(array("توضیحات",'t:textarea','n:desc'=>$rw,'inDiv')).
 		
 
-		ff(array('عکس','n:autoparts[]+'=>'','accept'=>'image/*','inDiv')).
+		ff(array('عکس','n:autoparts[]'=>'','accept'=>'image/*','inDiv')).
 		ff('br').
 		ff('br').
 		ff('br').
