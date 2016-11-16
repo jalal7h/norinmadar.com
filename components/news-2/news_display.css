@@ -21,6 +21,7 @@
 	color:#000 !important;
 	line-height:25px !important;
 	text-align:justify;
+	min-height: 340px;
 }
 .news_display .text * {
 	line-height:25px !important;
@@ -43,12 +44,14 @@
 	float: left;
 	margin: 5px 30px 30px 0;
 	border: 1px solid #888;
+	min-width: 48%;
+	max-height: 300px;
 }
 .news_display img {
+
 	text-align: center;
 	margin: auto;
 	max-width: 80%;
-	height: auto;
 }
 
 

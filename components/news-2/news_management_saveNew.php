@@ -7,13 +7,21 @@ function news_management_saveNew(){
 	$date = substr(U(),0,10);
 	#
 	# file upload
-	$file_nnme_arr = fileupload_upload( array("input"=>"news") );
-	#
+	
+	$id = dbi();
+	$file_nnme_arr = fileupload_upload( array("id"=>$id, "input"=>"news") );
+	
+	##
+
+
 	# insert
 	if(!dbq(" INSERT INTO `news` (`name`,`text`,`date`,`pic`,`tag`) VALUES ('$name','$text','$date','".$file_nnme_arr[0]."','$tag') ")){
 		echo "err - ".__LINE__;
 		echo dbe();
 	}
+
+	
+	#
 }
 
 

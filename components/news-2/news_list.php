@@ -47,6 +47,7 @@ function news_list_this( $rw ){
 			}
 			$tag = "کلمات کلیدی: ".implode(" , ", $tag_arr);
 		}
+		$path = "data/news/".$rw['id'];
 		if(!$list = fileupload_filelist($path)){
 			$list[0] = 'image.list/174240.png';
 		}
@@ -55,6 +56,7 @@ function news_list_this( $rw ){
 	<div class="r" >
 
 		<a href="'.$link.'" class="r" >
+			
 			<img src="'.$list[0].'" />
 			<div class="visit">'.$rw['visit'].' بازدید</div>
 			<div class="name">'.$rw['name'].'</div>

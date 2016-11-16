@@ -2,19 +2,23 @@
 .is_display {
 	display: inline-block;
 	position: relative;
-	margin-top: 30px;
+	margin-top: 20px;
 	width: 100%;
 	
 }
 .is_display .pics {
+	margin-top: 10px;
 	display: inline-block;
-	width: 30%;
+	width: 55%;
 	border-radius: 5px;
+	direction: ltr;
 }
 .is_display .pics img.main {
 	border-radius: 5px;
 	vertical-align: top;
-	width: 90%;
+	width: 85%;
+	min-height: 300px;
+	max-height: 400px;
 
 }
 .is_display .pics .tiny {
@@ -26,30 +30,35 @@
 	margin: 0 2px;
 }
 .is_display .text {
-	width:30%;
 	
-	height: 300px;
 	display: inline-block;
 	vertical-align: top;
 	direction: rtl;
-	margin: 0px 0px 0px 0px;
-	padding-top: 10px;
+	margin: 20px 0px 20px 0px;
+	padding-top: 8px;
+	background-color: #CACACA;
+	padding: 10px;
+	border-radius: 20px;
 }
 .model{
-	
+	color: #222;
 }
-
+.text>.name{
+	color: #222;
+}
 .is_display .text > div ,
 .is_display .text > div > span {
 	font-size: 15px;
 	line-height: 46px !important;
+
 }
 .is_display .text > div {
 	border-bottom: 1px dashed #eee;
+	display: inline-block;
+	margin-left: 20px;
 }
 .is_display .text > div > span {
-	color: #888;
-	padding: 5px;
+	color: #555;
 	display: inline-block;
 	margin-left: 10px;
 }
@@ -78,8 +87,7 @@
 	font-size: 15px;
 	line-height: 36px !important;
 }
-.p-dec{
-	min-height: 100px;
+.p-dec{	
 	font-size: 1em;
 	word-break:break-all;
 }

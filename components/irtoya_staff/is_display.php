@@ -21,28 +21,30 @@ function is_display(){
 		$c.= "
 		<div class='is_display'>
 		
-			<div class='pics'>
-				<a class='slideshow' href='".$list[0]."'><img class='main' src='".$list[0]."' /></a>
-				
-			</div>
-			<div class='text'>
-				<div class='name'><span>".lmtc("irtoya_staff:code")." : </span>".$rw['code']."</div>
-				<div class='model' ><span>قیمت  : </span>".$rw['price']." , ".$rw['model_en']."</div>
-				<br>
-				
-			</div>
-			
 			".($rw['desc'] ?"
 			<div class='desc'>
+				
 				<div>".lmtc("irtoya_staff:desc")." : </div>
 				<p class='p-dec'>".$rw['desc']."</p>
 			
 				<div>".lmtc("irtoya_staff:technical_features")." : </div>
-				<p class='p-dec'>".$rw['technical_features']."</p>
-			".is_display_form( $rw )."
-			</div>
-			" :"")."
+					<p class='p-dec'>".$rw['technical_features']."</p>
 
+				<div class='text'>
+					<div class='model' ><span>قیمت  : </span>".$rw['price']." , ".$rw['model_en']."</div>	
+					<div class='name'><span>".lmtc("irtoya_staff:code")." : </span>".$rw['code']."</div>
+				</div>
+				".is_display_form( $rw )."
+			</div>
+			
+			" :"")."
+		
+			<div class='pics'>
+		
+				<a class='slideshow' href='".$list[0]."'><img class='main' src='".$list[0]."' /></a>
+		
+			</div>
+			
 		</div>
 		
 		";
