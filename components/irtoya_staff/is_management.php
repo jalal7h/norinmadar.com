@@ -4,7 +4,7 @@
 # 2015/10/20
 # Version 1.0.0
 
-$GLOBALS['cmp']['is_management'] = 'مدریت محصولات';
+$GLOBALS['cmp']['is_management'] = 'مدیریت محصولات';
 
 function is_management(){
 	$url = "./?page=admin&cp=".$_REQUEST['cp'];

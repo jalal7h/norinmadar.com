@@ -1,6 +1,7 @@
 
 .billing_userpanel_payment {
 	margin: 0 0 50px 0;
+	padding: 20px 10px;
 }
 .billing_userpanel_payment .text {
 	transition: all 0.4s;
@@ -9,7 +10,7 @@
 }
 .billing_userpanel_payment .method_list {
 	display: inline-block;
-	width: 44%;
+	width: 54%;
 	margin: 0 20px 0 0;
 	vertical-align: top;
 }
@@ -19,13 +20,15 @@
 }
 .billing_userpanel_payment .method_list .r {
 	display: inline-block;
-	width: 40%;
+	width: 45%;
 	vertical-align: top;
 	margin: 0 10px;
 }
 .billing_userpanel_payment .method_list .r > * {
 	vertical-align: middle;
 	display: inline-block;
+	/* width: 150px; */
+	/* background-color: gray; */
 }
 .billing_userpanel_payment .method_list .r input {
 	position: relative; top: -13px;
@@ -74,7 +77,7 @@
 
 .billing_userpanel_payment .cost-container {
 	display: inline-block;
-	width: 50%;
+	width: 39%;
 	margin: 0 20px 0 0;
 }
 .billing_userpanel_payment .cost-container span {
@@ -83,13 +86,14 @@
 	font: normal 14px BYekan;
 }
 .billing_userpanel_payment .cost-container input[type=text] {
-	margin: 0 20px 0 0;
+	margin: 0 10px 0 0;
 	direction: ltr;
 	font-size: 18px;
 	padding: 5px 15px 5px 15px;
+	width: 100px !important;
 }
 .billing_userpanel_payment .cost-container .convbox {
-
+	padding: 10px;
 }
 .billing_userpanel_payment .cost-container input[type=submit] {
 	display: inline-block;

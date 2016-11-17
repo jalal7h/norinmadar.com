@@ -15,7 +15,7 @@ function users_changepassword_form(){
 				<input placeholder='Old password' type='password' name='old_password' /><br>
 				<input placeholder='New password' type='password' id='password1' /><br>
 				<input placeholder='Repeat password' type='password' id='password2' name='password' /><br>
-				<input type='submit' value='تغییر رمز' />
+				<input type='submit' class='submit_button' value='تغییر رمز' />
 			</div>
 		</form>";
 		?>

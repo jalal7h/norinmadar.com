@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.3
+-- version 4.6.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2016 at 10:09 PM
--- Server version: 5.6.28-0ubuntu0.15.04.1
--- PHP Version: 5.6.4-4ubuntu6.4
+-- Generation Time: Nov 17, 2016 at 11:16 AM
+-- Server version: 5.6.27
+-- PHP Version: 5.6.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `LIVE_norinmadar.com`
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `billing_invoice`
 --
 
-CREATE TABLE IF NOT EXISTS `billing_invoice` (
+CREATE TABLE `billing_invoice` (
   `id` int(11) NOT NULL,
   `uid` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
@@ -36,13 +36,20 @@ CREATE TABLE IF NOT EXISTS `billing_invoice` (
   `date` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
+--
+-- Dumping data for table `billing_invoice`
+--
+
+INSERT INTO `billing_invoice` (`id`, `uid`, `order_id`, `cost`, `method`, `transaction`, `date`) VALUES
+(1, 1, 0, 1000, 'manual3', '29038498457', 1478520000);
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `billing_method`
 --
 
-CREATE TABLE IF NOT EXISTS `billing_method` (
+CREATE TABLE `billing_method` (
   `id` int(11) NOT NULL,
   `method` text COLLATE utf8_persian_ci NOT NULL,
   `unit` text COLLATE utf8_persian_ci NOT NULL,
@@ -55,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `billing_method` (
   `c4` text COLLATE utf8_persian_ci NOT NULL,
   `c5` text COLLATE utf8_persian_ci NOT NULL,
   `hide` int(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `billing_method`
@@ -64,7 +71,8 @@ CREATE TABLE IF NOT EXISTS `billing_method` (
 INSERT INTO `billing_method` (`id`, `method`, `unit`, `terminal_id`, `terminal_user`, `terminal_pass`, `c1`, `c2`, `c3`, `c4`, `c5`, `hide`) VALUES
 (1, 'mellat', '0.1', '111111', 'username00', '856305402', '', '', '', '', '', 0),
 (2, 'manual1', '', '', '', '', 'بانک ملت', '1234567890', '6104666655554444', '', 'offline', 1),
-(3, 'manual2', '', '', '', '', 'بانک صادرات', '8123212345', '6037691044443333', '', 'offline', 1);
+(3, 'manual2', '', '', '', '', 'بانک صادرات', '8123212345', '6037691044443333', '', 'offline', 1),
+(4, 'manual3', '', '', '', '', 'بانک صادرات', '234584599848', '6037691044320099', '', 'offline', 0);
 
 -- --------------------------------------------------------
 
@@ -72,14 +80,14 @@ INSERT INTO `billing_method` (`id`, `method`, `unit`, `terminal_id`, `terminal_u
 -- Table structure for table `cat`
 --
 
-CREATE TABLE IF NOT EXISTS `cat` (
+CREATE TABLE `cat` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `parent` int(11) NOT NULL,
   `cat` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `ord` int(11) NOT NULL,
   `logo` varchar(255) COLLATE utf8_persian_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `cat`
@@ -104,7 +112,7 @@ INSERT INTO `cat` (`id`, `name`, `parent`, `cat`, `ord`, `logo`) VALUES
 -- Table structure for table `comments`
 --
 
-CREATE TABLE IF NOT EXISTS `comments` (
+CREATE TABLE `comments` (
   `id` int(11) NOT NULL,
   `table` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `table_id` int(11) NOT NULL,
@@ -122,11 +130,11 @@ CREATE TABLE IF NOT EXISTS `comments` (
 -- Table structure for table `faq`
 --
 
-CREATE TABLE IF NOT EXISTS `faq` (
+CREATE TABLE `faq` (
   `id` int(11) NOT NULL,
   `name` text COLLATE utf8_persian_ci NOT NULL,
   `text` text COLLATE utf8_persian_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `faq`
@@ -142,7 +150,7 @@ INSERT INTO `faq` (`id`, `name`, `text`) VALUES
 -- Table structure for table `irtoya_staff`
 --
 
-CREATE TABLE IF NOT EXISTS `irtoya_staff` (
+CREATE TABLE `irtoya_staff` (
   `id` int(11) NOT NULL,
   `name` text COLLATE utf8_persian_ci NOT NULL COMMENT 'نام محصول',
   `code` varchar(300) COLLATE utf8_persian_ci NOT NULL COMMENT 'کد محصول',
@@ -152,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `irtoya_staff` (
   `price` text COLLATE utf8_persian_ci NOT NULL COMMENT 'قیمت',
   `desc` text COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات',
   `autoparts` text COLLATE utf8_persian_ci NOT NULL COMMENT 'عکس'
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `irtoya_staff`
@@ -177,7 +185,7 @@ INSERT INTO `irtoya_staff` (`id`, `name`, `code`, `cat`, `technical_features`, `
 -- Table structure for table `mailq`
 --
 
-CREATE TABLE IF NOT EXISTS `mailq` (
+CREATE TABLE `mailq` (
   `id` int(11) NOT NULL,
   `to` text COLLATE utf8_persian_ci NOT NULL,
   `subject` text COLLATE utf8_persian_ci NOT NULL,
@@ -192,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `mailq` (
 -- Table structure for table `news`
 --
 
-CREATE TABLE IF NOT EXISTS `news` (
+CREATE TABLE `news` (
   `id` int(11) NOT NULL,
   `name` text COLLATE utf8_persian_ci NOT NULL,
   `text` text COLLATE utf8_persian_ci NOT NULL,
@@ -200,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `visit` int(11) NOT NULL,
   `pic` text COLLATE utf8_persian_ci NOT NULL,
   `tag` text COLLATE utf8_persian_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `news`
@@ -217,7 +225,7 @@ INSERT INTO `news` (`id`, `name`, `text`, `date`, `visit`, `pic`, `tag`) VALUES
 -- Table structure for table `orders`
 --
 
-CREATE TABLE IF NOT EXISTS `orders` (
+CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `uid` int(11) NOT NULL,
   `date` int(11) NOT NULL,
@@ -233,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
 -- Table structure for table `orders_item`
 --
 
-CREATE TABLE IF NOT EXISTS `orders_item` (
+CREATE TABLE `orders_item` (
   `id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -244,15 +252,38 @@ CREATE TABLE IF NOT EXISTS `orders_item` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `slideshow`
+--
+
+CREATE TABLE `slideshow` (
+  `id` int(11) NOT NULL,
+  `name` text COLLATE utf8_persian_ci NOT NULL,
+  `link` text COLLATE utf8_persian_ci NOT NULL,
+  `description` text COLLATE utf8_persian_ci NOT NULL,
+  `pic` text COLLATE utf8_persian_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Dumping data for table `slideshow`
+--
+
+INSERT INTO `slideshow` (`id`, `name`, `link`, `description`, `pic`) VALUES
+(1, 'اسلاید ۱ برای تست', 'http://google.com', 'یه توضیحاتی برای آزمایش', 'data/slideshow/0-4226-531bc77f5bdd5c5ebe587446dda7a2fc.jpg'),
+(2, 'اسلاید دوم برای ازمایش مجدد', 'http://yahoo.com', 'توضیحاتی چند در مدح پروردگار', 'data/slideshow/0-3765-6a36ecf030777c5c3658dd0b7bf5b84e.jpg'),
+(3, 'اسلاید سوم ۰۰۰', 'http://tech.yahoo.com', 'آزمایشی دگر', 'data/slideshow/0-8096-b578b24041bfaa27b10f9d83547b1233.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `texty`
 --
 
-CREATE TABLE IF NOT EXISTS `texty` (
+CREATE TABLE `texty` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'عنوان لاتین',
   `name_fa` text COLLATE utf8_persian_ci NOT NULL COMMENT 'عنوان فارسی',
   `content` text COLLATE utf8_persian_ci NOT NULL COMMENT 'محتوا'
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `texty`
@@ -271,7 +302,7 @@ INSERT INTO `texty` (`id`, `name`, `name_fa`, `content`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
@@ -280,14 +311,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `tell` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `cell` varchar(255) COLLATE utf8_persian_ci NOT NULL,
   `wallet_credit` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `permission`, `name`, `tell`, `cell`, `wallet_credit`) VALUES
-(1, 'admin', 'hellcat', 2, 'مدیریت سایت', '02166936950', '09127744129', 0);
+(1, 'admin', 'hellcat', 2, 'مدیریت سایت', '02166936950', '09127744129', 1000);
 
 -- --------------------------------------------------------
 
@@ -295,7 +326,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `permission`, `name`, `tell`,
 -- Table structure for table `_links`
 --
 
-CREATE TABLE IF NOT EXISTS `_links` (
+CREATE TABLE `_links` (
   `_id` int(12) NOT NULL,
   `_url` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `_title` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
@@ -303,7 +334,7 @@ CREATE TABLE IF NOT EXISTS `_links` (
   `_priority` int(1) NOT NULL DEFAULT '0',
   `_status` int(1) NOT NULL DEFAULT '0',
   `parent` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_links`
@@ -322,13 +353,13 @@ INSERT INTO `_links` (`_id`, `_url`, `_title`, `_type`, `_priority`, `_status`, 
 -- Table structure for table `_pages`
 --
 
-CREATE TABLE IF NOT EXISTS `_pages` (
+CREATE TABLE `_pages` (
   `_page` int(11) NOT NULL,
   `_title` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `meta_title` text COLLATE utf8_persian_ci NOT NULL COMMENT 'عنوان صفحه',
   `meta_kw` text COLLATE utf8_persian_ci NOT NULL COMMENT 'کلمات کلیدی',
   `meta_desc` text COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات'
-) ENGINE=MyISAM AUTO_INCREMENT=160 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_pages`
@@ -367,7 +398,7 @@ INSERT INTO `_pages` (`_page`, `_title`, `meta_title`, `meta_kw`, `meta_desc`) V
 -- Table structure for table `_page_frames`
 --
 
-CREATE TABLE IF NOT EXISTS `_page_frames` (
+CREATE TABLE `_page_frames` (
   `_id` int(12) NOT NULL,
   `_position` varchar(50) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `_priority` int(6) NOT NULL DEFAULT '0',
@@ -377,7 +408,7 @@ CREATE TABLE IF NOT EXISTS `_page_frames` (
   `_data` text COLLATE utf8_persian_ci NOT NULL,
   `_framed` int(6) NOT NULL DEFAULT '0',
   `_status` int(6) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=10000007 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_page_frames`
@@ -385,8 +416,7 @@ CREATE TABLE IF NOT EXISTS `_page_frames` (
 
 INSERT INTO `_page_frames` (`_id`, `_position`, `_priority`, `_func`, `_type`, `_title`, `_data`, `_framed`, `_status`) VALUES
 (10000001, 'top', 1, 'post', 'PHP5', 'this is the top title', '<?php\r\nf_front__f_html__TOP();\r\n?>', 0, 1),
-(10000002, 'down', 2, 'post', 'PHP5', 'down...', '<?php\r\nf_front__f_html__DOWN();\r\n?>', 0, 1),
-(10000006, 'down', 3, 'post', 'PHP5', '', '<!-- Begin WebGozar.com Counter code -->\r\n<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3570224&amp;t=counter" ></script>\r\n<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3570224" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>\r\n<!-- End WebGozar.com Counter code -->', 0, 1);
+(10000002, 'down', 2, 'post', 'PHP5', 'down...', '<?php\r\nf_front__f_html__DOWN();\r\n?>', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -394,7 +424,7 @@ INSERT INTO `_page_frames` (`_id`, `_position`, `_priority`, `_func`, `_type`, `
 -- Table structure for table `_page_layers`
 --
 
-CREATE TABLE IF NOT EXISTS `_page_layers` (
+CREATE TABLE `_page_layers` (
   `_id` int(11) NOT NULL,
   `_page` int(6) NOT NULL DEFAULT '0',
   `_priority` int(6) NOT NULL DEFAULT '0',
@@ -404,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `_page_layers` (
   `_data` text COLLATE utf8_persian_ci NOT NULL,
   `_framed` int(6) NOT NULL DEFAULT '0',
   `_status` int(6) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=162 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `_page_layers`
@@ -413,7 +443,7 @@ CREATE TABLE IF NOT EXISTS `_page_layers` (
 INSERT INTO `_page_layers` (`_id`, `_page`, `_priority`, `_func`, `_type`, `_title`, `_data`, `_framed`, `_status`) VALUES
 (2, 2, 1, 'contact_display', '', 'ارتباط با ما', '', 1, 1),
 (20, 20, 1, 'faq_display', '', 'سوالات متداول', '', 1, 1),
-(1, 1, 2, 'slidex_display', '', 'نمایش اسلاید', '', 1, 0),
+(1, 1, 1, 'slideshow_display', '', 'نمایش اسلاید', '', 1, 1),
 (3, 3, 1, 'is_about', '', 'درباره ما', '', 1, 1),
 (4, 4, 1, 'post', 'HTML', 'راهنمای سایت', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
 (5, 5, 1, 'post', 'HTML', 'آموزش', '<br><br><center class=tx1>اين صفحه در حال طراحي ميباشد</center><br><br>', 1, 1),
@@ -436,7 +466,7 @@ INSERT INTO `_page_layers` (`_id`, `_page`, `_priority`, `_func`, `_type`, `_tit
 (60, 60, 1, 'post', 'PHP5', 'ورود کاربر', '<?\r\nusers_login_form();\r\n?>', 1, 1),
 (63, 63, 1, 'post', 'PHP5', 'فراموشی کلمه عبور', '<?\r\nusers_forgot_form();\r\n?>', 1, 1),
 (14, 14, 1, 'post', 'PHP5', 'پنل کاربر', '<? userpanel_menu(); ?>\r\n<div class="userpanel_desk_container">\r\n    <? userpanel_desk(); ?>\r\n</div>', 1, 1),
-(159, 1, 4, 'is_list', 'HTML', 'محصولات', '', 1, 1),
+(159, 1, 2, 'is_list', 'HTML', 'محصولات', '', 1, 1),
 (161, 159, 1, 'is_list', '', 'محصولات ما', '', 1, 1);
 
 -- --------------------------------------------------------
@@ -445,7 +475,7 @@ INSERT INTO `_page_layers` (`_id`, `_page`, `_priority`, `_func`, `_type`, `_tit
 -- Table structure for table `_temp`
 --
 
-CREATE TABLE IF NOT EXISTS `_temp` (
+CREATE TABLE `_temp` (
   `_key` varchar(250) COLLATE utf8_persian_ci NOT NULL DEFAULT '',
   `_val` text COLLATE utf8_persian_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
@@ -517,7 +547,9 @@ ALTER TABLE `faq`
 -- Indexes for table `irtoya_staff`
 --
 ALTER TABLE `irtoya_staff`
-  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `code` (`code`), ADD UNIQUE KEY `code_2` (`code`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `code` (`code`),
+  ADD UNIQUE KEY `code_2` (`code`);
 
 --
 -- Indexes for table `mailq`
@@ -544,16 +576,24 @@ ALTER TABLE `orders_item`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `slideshow`
+--
+ALTER TABLE `slideshow`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `texty`
 --
 ALTER TABLE `texty`
-  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `name` (`name`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `username` (`username`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Indexes for table `_links`
@@ -593,17 +633,17 @@ ALTER TABLE `_temp`
 -- AUTO_INCREMENT for table `billing_invoice`
 --
 ALTER TABLE `billing_invoice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `billing_method`
 --
 ALTER TABLE `billing_method`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `cat`
 --
 ALTER TABLE `cat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `comments`
 --
@@ -613,12 +653,12 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `irtoya_staff`
 --
 ALTER TABLE `irtoya_staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `mailq`
 --
@@ -628,7 +668,7 @@ ALTER TABLE `mailq`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `orders`
 --
@@ -640,35 +680,40 @@ ALTER TABLE `orders`
 ALTER TABLE `orders_item`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `slideshow`
+--
+ALTER TABLE `slideshow`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `texty`
 --
 ALTER TABLE `texty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `_links`
 --
 ALTER TABLE `_links`
-  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `_pages`
 --
 ALTER TABLE `_pages`
-  MODIFY `_page` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=160;
+  MODIFY `_page` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 --
 -- AUTO_INCREMENT for table `_page_frames`
 --
 ALTER TABLE `_page_frames`
-  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10000007;
+  MODIFY `_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10000007;
 --
 -- AUTO_INCREMENT for table `_page_layers`
 --
 ALTER TABLE `_page_layers`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=162;
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

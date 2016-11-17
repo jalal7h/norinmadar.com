@@ -19,7 +19,7 @@ function users_profile_form(){
 				<input placeholder='آدرس ایمیل' type='text' name='username' value='".$rw['username']."' /><br>
 				<input placeholder='شماره تلفن' type='text' name='tell' value='".$rw['tell']."' /><br>
 				<input placeholder='شماره همراه' type='text' name='cell' value='".$rw['cell']."' /><br>
-				<input type='submit' value='ثبت تغییرات' />
+				<input type='submit' class='submit_button' value='ثبت تغییرات' />
 			</div>
 		</form>";
 		?>

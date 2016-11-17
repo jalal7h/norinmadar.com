@@ -60,7 +60,7 @@ function billing_userpanel_payment(){
 			".$method_str_offline."
 		</div>
 		<div class='cost-container'>
-			<span>مبلغ قابل پرداخت</span>
+			<span>مبلغ</span>
 			<input type=text name='cost' class='numeric' id='billing_cost' value='$cost' ".($cost?"readonly='1'":"")." />
 			<span>تومان</span>
 			<div class='convbox'>
