@@ -9,7 +9,7 @@ function is_list($table_name=null , $page_id=null){
 
 	
 
-	if($r=$_REQUEST['id']){
+	if($r=$_REQUEST['cat_id']){
 		$cat_id="`cat`='$r'";
 	} else {
 		$cat_id='1';

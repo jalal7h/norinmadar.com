@@ -27,7 +27,7 @@ function cat_product_display($table_name=null , $page_id=null){
 
 function cat_product_display_this($rw){
 
-	$link="./?page=home"."&id=".$rw['id'];
+	$link="./?page=home"."&cat_id=".$rw['id'];
 	$name =$rw['name'];
 	$path = $rw['logo'];
 	$c = '

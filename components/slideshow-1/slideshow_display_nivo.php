@@ -15,6 +15,7 @@ function slideshow_display_nivo(){
 	<div class="slider-wrapper theme-default">
 	<div class="ribbon"></div>
 	<div id="slider" class="nivoSlider">
+
 	<?
 	
 	if(!$rs = dbq(" SELECT * FROM `slideshow` ORDER BY `id` DESC ")){
@@ -30,12 +31,11 @@ function slideshow_display_nivo(){
 
 		if( $rw['name'] ) {
 			$title_of_img_tag = '<div class=slideshow_detail ><div class=name >'.$rw['name'].'</div><div class=description >'.$rw['description'].'</div></div>';
-		
+
 		} else {
 			$title_of_img_tag = "";
 		}
-
-		echo '<img title="'.$title_of_img_tag.'" src="'.$rw['pic'].'" />'."\n";
+		echo '<img  title="'.$title_of_img_tag.'" src="'.$rw['pic'].'" />'."\n";
 
 		if($rw['link']!=''){
 			echo "</a>";
