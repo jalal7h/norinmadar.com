@@ -19,6 +19,8 @@ RewriteRule ^compare-(.*)$ ./?page=157&id=$1 [L]
 RewriteRule ^compare$ ./?page=157 [L]
 
 # 
+# home
+RewriteRule ^home$ ./?page=1 [L]
 # irtoya_staff
 
 RewriteRule ^product$ ./?page=108 [L]

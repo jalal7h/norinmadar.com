@@ -7,6 +7,8 @@ $GLOBALS['block_layers']['is_list']="لیست محصولات";
 function is_list($table_name=null , $page_id=null){
 
 
+	
+
 	$list['name'] = 'is_list';
 	$list['head'] = '';
 	$list['tdd'] = 12;
@@ -28,6 +30,7 @@ function is_list($table_name=null , $page_id=null){
 	} else {
 		echo $content;
 	}
+	echo $cat_p;
 
 	echo listmaker_showcase($list);
 
@@ -46,7 +49,7 @@ function is_list_this( $rw ){
 	$c.= "
 		<img class='main' src='".$list[0]."' />
 		
-	
+			
 		<div>
 			<div class='text'>".$rw['name']."، ".$rw['brand_fa']." ".$rw['model_fa']."</div>
 			<div class='order'>ثبت سفارش</div>
@@ -58,8 +61,8 @@ function is_list_this( $rw ){
 	return $c;
 }
 
-function is_linkk( $rw ){
-	return _URL."/product-".$rw["id"]."-".name_for_link($rw["name"]).".html";
+	function is_linkk( $rw ){
+		return _URL."/product-".$rw["id"]."-".name_for_link($rw["name"]).".html";
 }
 
 

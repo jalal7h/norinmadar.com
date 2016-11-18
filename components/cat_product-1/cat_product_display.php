@@ -1,0 +1,46 @@
+<?
+
+$GLOBALS['block_layers']['cat_product_display']="گروه محصولات";	
+
+function cat_product_display($table_name=null , $page_id=null){
+
+	echo "<div class='a'>";
+	$query = " SELECT * FROM `cat` WHERE `cat`='main' ORDER BY `id` DESC ";
+	
+	if(!$rs = dbq($query)){
+		
+		$content.= dbe();
+		
+	} else if(!dbn($rs)){
+			
+		$content.= "</div>";
+		return false;
+
+	} else while($rw = dbf($rs)){
+	
+		$content=cat_product_display_this($rw);
+		
+	}
+	echo '</div>';
+}
+
+function cat_product_display_this($rw){
+
+	$name =$rw['name'];
+	$path = $rw['logo'];
+	$c = '
+	
+
+		<a href="'.$link.'" class="a" >
+			
+			<img src="'.$path.'" />
+			<div class="name">'.$name.'</div>
+		</a>
+	';
+	echo $c;
+
+	
+}
+function cat_product_display_thislink($rw){
+
+}

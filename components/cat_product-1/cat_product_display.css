@@ -1,0 +1,26 @@
+.a{
+
+	text-align: center;	
+}
+.a>.a{
+			width: 49%;
+	display: inline-block;
+
+}
+.a>img{
+
+			height: 200px;
+		width: 100%;
+
+	position: relative;
+}
+.a>.name{
+	text-align: right;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;
+	background-color: rgba(0,0,0,.5);
+	position: relative;
+	bottom: 50px;
+	padding: 20px;
+}

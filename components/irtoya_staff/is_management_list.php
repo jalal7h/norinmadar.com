@@ -37,7 +37,7 @@ function is_management_list(){
 	
 	foreach ($GLOBALS['irtoya_staff_order_of_columns'] as $k => $column) {
 		$list['list_array'][] = array("head"=>lmtc("irtoya_staff:".$column), "content" => '$rw[\''.$column.'\']');
-		$list['search'][] = $column;
+	
 	}
 
 	echo listmaker_list($list);

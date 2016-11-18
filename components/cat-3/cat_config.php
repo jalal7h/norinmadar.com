@@ -9,5 +9,5 @@ $GLOBALS['cat_items'] = array (
 	'type' => array( 'نوع خودرو' , $inDashboard=false , $zirgoruh=false, $haveIcon=false ),
 );
 
-$GLOBALS['cat_items']['main'] = array( 'دسته بندی' , $inDashboard=false , $zirgoruh=false, $haveIcon=false );
+$GLOBALS['cat_items']['main'] = array( 'دسته بندی' , $inDashboard=false , $zirgoruh=false, $haveIcon=true );
 
