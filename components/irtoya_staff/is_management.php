@@ -29,3 +29,10 @@ $GLOBALS['irtoya_staff_order_of_columns'] = array(
 	'cat',
 );
 
+$GLOBALS['irtoya_staff_order_of_columns_list'] = array(
+	'name',
+	'code',
+	'number',
+	'price',
+);
+

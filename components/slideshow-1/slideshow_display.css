@@ -29,11 +29,15 @@
 }
 
 .theme-default .nivoSlider {
+
 	-webkit-box-shadow: 0 0 0 #000 !important;
 	box-shadow: 0 0 0 #000 !important;
 }
+.nivo-main-image{
+	min-height: 330px;
+	max-height: 350px;
+}
 
-/*
 #slider {
 	box-shadow: 0px 5px 20px 2px #666;
 	border-radius:15px;
@@ -42,5 +46,3 @@
 	position:relative; top:-50px; left:20px; z-index:100;
 	text-align:left !important;
 }
-
-*/

@@ -1,26 +1,26 @@
-.a{
-
+.catP{
+	margin-top: 50px;
 	text-align: center;	
 }
-.a>.a{
-			width: 49%;
+.catP>.catP1{
+	width: 49%;
 	display: inline-block;
 
 }
-.a>img{
+.catP1>img{
 
-			height: 200px;
-		width: 100%;
-
+	height: 250px;
+	width: 100%;
 	position: relative;
 }
-.a>.name{
+.catP1>.name{
 	text-align: right;
 	font-size: 18px;
 	color: #fff;
+	
 	font-weight: bold;
 	background-color: rgba(0,0,0,.5);
 	position: relative;
-	bottom: 50px;
+	bottom: 58px;
 	padding: 20px;
 }
