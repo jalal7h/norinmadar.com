@@ -10,18 +10,18 @@ function is_list($table_name=null , $page_id=null){
 	
 
 	if($r=$_REQUEST['id']){
-		$idr="`cat`='$r'";
+		$cat_id="`cat`='$r'";
 	} else {
-		$idr='1';
+		$cat_id='1';
 	}
-		
+
 	$list['name'] = 'is_list';
 	$list['head'] = '';
-	$list['tdd'] = 12;
+	$list['tdd'] = 9;
 	$list['quiet_if_empty'] = false;
 	$list['exclude_in_query'] = true;
 	$list['progressive'] = false;
-	$list['query'] = " SELECT * FROM `irtoya_staff` WHERE $idr ORDER BY `id` DESC ";
+	$list['query'] = " SELECT * FROM `irtoya_staff` WHERE $cat_id ORDER BY `id` DESC ";
 	$list['target_url'] = 'is_linkk( $rw )';
 	$list['target_blank'] = false;
 	$list['paging_url'] = '_URL."/?page=".$_REQUEST["page"]."&q=".$_REQUEST["q"]."&p=%%"';
