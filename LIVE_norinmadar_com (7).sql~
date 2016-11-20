@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 19, 2016 at 12:21 AM
+-- Generation Time: Nov 19, 2016 at 02:42 PM
 -- Server version: 5.6.28-0ubuntu0.15.04.1
 -- PHP Version: 5.6.4-4ubuntu6.4
 
@@ -261,19 +261,19 @@ CREATE TABLE IF NOT EXISTS `slideshow` (
   `link` text COLLATE utf8_persian_ci NOT NULL,
   `description` text COLLATE utf8_persian_ci NOT NULL,
   `pic` text COLLATE utf8_persian_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `slideshow`
 --
 
 INSERT INTO `slideshow` (`id`, `name`, `link`, `description`, `pic`) VALUES
-(6, '', '', '', 'data/slideshow/0-2631-52f6b2bfe779d9908330588af301b9be.jpg'),
-(7, '', '', '', 'data/slideshow/0-6184-dbfb876b711b3e18d19ba9f63c055d69.jpg'),
-(8, '', '', '', 'data/slideshow/0-6111-7c44170a7b48fa529133971397af25e8.jpg'),
-(9, '', '', '', 'data/slideshow/0-5370-a5bf255ea4acdc22ca38b60baf55f8cf.jpg'),
-(10, '', '', '', 'data/slideshow/0-7624-6c0d312123e43bc4773ecdbe98cef0a7.jpg'),
-(11, '', '', '', 'data/slideshow/0-9405-469206f8cdf0600a12afe05ad40657b9.jpg');
+(16, '', '', '', 'data/slideshow/0-9447-2d109c8fdb3c7fa4c15010a678dfdc10.png'),
+(17, '', '', '', 'data/slideshow/0-1408-d77562b888a91730cc38ecf42e58207a.png'),
+(18, '', '', '', 'data/slideshow/0-5764-35791413e00fa7b0cc7a48fcc43dd2fd.png'),
+(14, '', '', '', 'data/slideshow/0-7272-811df8a748bce9ddf134a8d63bc7a294.png'),
+(15, '', '', '', 'data/slideshow/0-4981-e8f71144a0f354e76320bd3090a269b9.png'),
+(13, '', '', '', 'data/slideshow/0-2996-32a0bc86899a3023791b34ef79b25595.png');
 
 -- --------------------------------------------------------
 
@@ -370,7 +370,7 @@ CREATE TABLE IF NOT EXISTS `_pages` (
 INSERT INTO `_pages` (`_page`, `_title`, `meta_title`, `meta_kw`, `meta_desc`) VALUES
 (2, 'ارتباط با ما', '', '', ''),
 (20, 'سوالات متداول', '', '', ''),
-(1, 'صفحه اصلی', '', '', ''),
+(1, 'صفحه اصلی', '<?\r\n is_meta($type);\r\n?>', '', ''),
 (3, 'درباره ما', '', '', ''),
 (4, 'راهنمای سایت', '', '', ''),
 (5, 'آموزش', '', '', ''),
@@ -505,7 +505,7 @@ INSERT INTO `_temp` (`_key`, `_val`) VALUES
 ('email_address_support', 'support@norinmadar.com'),
 ('sms_state', '1'),
 ('webstatus_main', '1'),
-('unsuccessful_attack', '192'),
+('unsuccessful_attack', '195'),
 ('security_number', '671432'),
 ('user_noaccess_delay', '3600'),
 ('user_max_access', '200'),
@@ -684,7 +684,7 @@ ALTER TABLE `orders_item`
 -- AUTO_INCREMENT for table `slideshow`
 --
 ALTER TABLE `slideshow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `texty`
 --

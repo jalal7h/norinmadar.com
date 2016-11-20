@@ -15,7 +15,6 @@ RewriteRule ^faq$ ./?page=20 [L]
 # online-payment-1
 
 RewriteRule ^online-payment$ ./?page=160 [L]
-
 # irtoya
 RewriteRule ^([0-9]+)-(.*).html$ ./?page=156&id=$1 [L]
 RewriteRule ^compare-(.*)$ ./?page=157&id=$1 [L]
@@ -59,7 +58,7 @@ RewriteRule ^orders-list$ ./?page=62&do=orders_user_list [L]
 # 
 # seo-2
 RewriteRule ^sitemap.xml$ ./?do_action=seo_sitemap [L]
-RewriteRule ^rss/([a-zA-Z0-9]+)\.xml$ ./?do_action=seo_rss&feed=$1 [L]
+RewriteRule ^rss/([a-zA-Z0-9]+)\.xml$ ./?do_action=se [L]
 
 # 
 # userpanel-2

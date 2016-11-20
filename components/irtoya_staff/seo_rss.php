@@ -1,6 +1,6 @@
 <?
 
-$GLOBALS['seo_rss']['autoparts'] = array( 
+$GLOBALS['seo_rss']['produc'] = array( 
 	"query" => " SELECT 
 		*,
 		`id`, 

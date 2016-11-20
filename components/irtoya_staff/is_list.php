@@ -3,7 +3,9 @@
 # jalal7h@gmail.com
 # 2015/10/20
 # Version 1.0.0
+
 $GLOBALS['block_layers']['is_list']="لیست محصولات";
+
 function is_list($table_name=null , $page_id=null){
 
 
@@ -26,8 +28,7 @@ function is_list($table_name=null , $page_id=null){
 	$list['target_blank'] = false;
 	$list['paging_url'] = '_URL."/?page=".$_REQUEST["page"]."&q=".$_REQUEST["q"]."&p=%%"';
 	$list['pattern'] = 'is_list_this($rw)';
-	$list['search'] = array("name","brand_fa","brand_en","model_fa","model_en");
-	
+	$list['search'] = array("name","cat");
 	
 	if($page_id){
 
@@ -69,7 +70,7 @@ function is_list_this( $rw ){
 }
 
 	function is_linkk( $rw ){
-		return _URL."/product-".$rw["id"]."-".name_for_link($rw["name"]).".html";
+		return _URL."/product-".$rw["id"]."-".name_for_link($rw["name"])."-cat_id-".$rw["cat"].".html";
 }
 
 

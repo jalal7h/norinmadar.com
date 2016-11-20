@@ -4,6 +4,8 @@
 # 2015/10/20
 # Version 1.0.0
 
+$GLOBALS['block_layers']['is_display']="نمایش محصول";
+
 function is_display(){
 	if(!$id = $_REQUEST['id']){
 		e(__FUNCTION__.__LINE__);
