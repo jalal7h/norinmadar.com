@@ -1,11 +1,11 @@
 <?
 
-$GLOBALS['seo_rss']['produc'] = array( 
+$GLOBALS['seo_rss']['product'] = array( 
 	"query" => " SELECT 
 		*,
 		`id`, 
 		`name`, 
-		CONCAT(`name`,' ',`cat`) as `text`, UNIX_TIMESTAMP() as `date` 
+		`desc` as `text`, UNIX_TIMESTAMP() as `date` 
 		FROM `irtoya_staff` 
 	WHERE 1 
 	ORDER BY `id` DESC LIMIT 100 ",

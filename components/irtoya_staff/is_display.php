@@ -7,15 +7,18 @@
 $GLOBALS['block_layers']['is_display']="نمایش محصول";
 
 function is_display(){
-	if(!$id = $_REQUEST['id']){
+
+	if(! $id = $_REQUEST['id'] ){
 		e(__FUNCTION__.__LINE__);
-	} else if(!$rw = table("irtoya_staff", $id)){
+	
+	} else if(! $rw = table("irtoya_staff", $id) ){
 		e(__FUNCTION__.__LINE__);
+	
 	} else {
 		$title = $rw['name'];
 		
 		$path = "data/autoparts/".$rw['id'];
-		if(!$list = fileupload_filelist($path)){
+		if(! $list = fileupload_filelist($path) ){
 			$list[0] = 'image.list/is-no-pic.png';
 		}
 		
@@ -23,7 +26,7 @@ function is_display(){
 		$c.= "
 		<div class='is_display'>
 		
-			".($rw['desc'] ?"
+			".( $rw['desc'] ? "
 			<div class='desc'>
 				
 				<div>".lmtc("irtoya_staff:desc")." : </div>
@@ -39,7 +42,7 @@ function is_display(){
 				".is_display_form( $rw )."
 			</div>
 			
-			" :"")."
+			" : "" )."
 		
 			<div class='pics'>
 		
@@ -47,14 +50,13 @@ function is_display(){
 		
 			</div>
 			
-		</div>
-		
-		";
+		</div>";
 
-		create_box($title, $c, $allow_eval=false, $framed=true, $position="center");
+		create_box( $title, $c, $allow_eval=false, $framed=true, $position="center" );
 	}
 
 	return false;
+
 }
 
 
