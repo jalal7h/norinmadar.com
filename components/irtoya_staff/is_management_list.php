@@ -26,8 +26,7 @@ function is_management_list(){
 	}
 
 	$clmns = $GLOBALS['irtoya_staff_order_of_columns'];
-	
-	
+		
 	$list['name'] = 'is_management_list';
 	$list['query'] = " SELECT * FROM `irtoya_staff` WHERE 1 ORDER BY `id` DESC ";
 	$list['tdd'] = 7;
@@ -40,10 +39,12 @@ function is_management_list(){
 		'cat' => "<option value='' >.. گروه ..</option>".cat_display('main',$is_array=false,$parent=0,$optionPreStr=""),
 			
 	);
-	foreach ($GLOBALS['irtoya_staff_order_of_columns_list'] as $k => $column) {
-		$list['list_array'][] = array("head"=>lmtc("irtoya_staff:".$column), "content" => '$rw[\''.$column.'\']');
 	
+	foreach ($GLOBALS['irtoya_staff_order_of_columns_list'] as $k => $column) {
+	
+		$list['list_array'][] = array("head"=>lmtc("irtoya_staff:".$column), "content" => '$rw[\''.$column.'\']');
 	}
+
 	$list['search'] = array("name","description");
 
 	echo listmaker_list($list);

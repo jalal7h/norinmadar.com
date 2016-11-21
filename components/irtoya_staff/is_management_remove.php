@@ -5,6 +5,7 @@
 # Version 1.0.0
 
 function is_management_remove(){
+
 	if(!$id = $_REQUEST['id']){
 		e(__FUNCTION__.__LINE__);
 	} else if(!dbq(" DELETE FROM `irtoya_staff` WHERE `id`='$id' LIMIT 1 ")){

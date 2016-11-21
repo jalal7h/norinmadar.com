@@ -19,6 +19,7 @@ function slideit( $path , $time=1000 , $class="" ){
 		$elem_class = strrev($elem_class);
 		$elem_class = str_replace(".", "", $elem_class);
 		$elem_class.= " slideit";
+
 	} else {
 		$class = ".slideit";
 		$elem_class = "slideit";
@@ -27,11 +28,12 @@ function slideit( $path , $time=1000 , $class="" ){
 	$fs = getimagesize($file_list[0]);
 
 	$c.= '<div class="'.$elem_class.'">';	
+
 	foreach ($file_list as $k => $file) {
 		$c.= "<img src='".$file."' />";
 	}
-	$c.= '</div>';
 
+	$c.= '</div>';
 	$c.= "
 	<script>
 		$(document).ready(function(){

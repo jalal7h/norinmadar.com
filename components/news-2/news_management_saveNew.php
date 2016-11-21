@@ -1,6 +1,7 @@
 <?
 
 function news_management_saveNew(){
+
 	$name = $_REQUEST['name'];
 	$text = $_REQUEST['text'];
 	$tag = $_REQUEST['tag'];

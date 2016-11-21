@@ -4,9 +4,12 @@ function news_meta( $type ){
 
 	if(!$id = $_REQUEST['id']){
 		e(__FUNCTION__.__LINE__);
+
 	} else if(!$rw = table("news", $id)){
 		e(__FUNCTION__.__LINE__);
+
 	} else {
+
 		switch ( $type ) {
 
 			case 'title':

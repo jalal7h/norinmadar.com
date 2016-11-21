@@ -1,9 +1,11 @@
 <?
 
 function news_management_saveEdit(){
+
 	if(!$id = $_REQUEST['id']){
 		echo "err - ".__LINE__;
 		return false;
+
 	} else if(!$tnews = table("news",$id)){
 		echo "err - ".__LINE__;
 		return false;

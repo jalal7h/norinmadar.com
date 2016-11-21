@@ -9,18 +9,15 @@ function cat_product_display($table_name=null , $page_id=null){
 	$query = " SELECT * FROM `cat` WHERE `cat`='main' ORDER BY `id` DESC ";
 	
 	if(!$rs = dbq($query)){
-		
 		$content.= dbe();
-		
+	
 	} else if(!dbn($rs)){
-			
 		$content.= "</div>";
 		return false;
 
-	} else while($rw = dbf($rs)){
 	
-		$content=cat_product_display_this($rw);
-		
+	} else while($rw = dbf($rs)){
+		$content=cat_product_display_this($rw);		
 	}
 	echo '</div>';
 }

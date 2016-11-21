@@ -1,6 +1,6 @@
 <?
 
-# jalal7h@gmail.com
+# amirzakaria110@gmail.com
 # 2015/10/20
 # Version 1.0.0
 
@@ -69,7 +69,6 @@ function is_list_this( $rw ){
 	return $c;
 
 }
-
 
 function is_linkk( $rw ){
 	return _URL."/product-".$rw["id"]."-".name_for_link($rw["name"])."-cat_id-".$rw["cat"].".html";

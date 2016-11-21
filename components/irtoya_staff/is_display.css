@@ -4,24 +4,19 @@
 	position: relative;
 	margin-top: 20px;
 	width: 100%;
-	
 }
 .is_display .pics {
 	margin-top: 10px;
 	display: inline-block;
 	width: 55%;
-	border-radius: 5px;
 	direction: ltr;
+	margin-right: 10px;
 }
 .is_display .pics img.main {
-	border-radius: 5px;
 	vertical-align: top;
-	width: 85%;
+	width: 100%;
 	min-height: 300px;
 	max-height: 400px;
-
-}
-.is_display .pics .tiny {
 }
 .is_display .pics .tiny img {
 	border-radius: 4px;
@@ -30,15 +25,13 @@
 	margin: 0 2px;
 }
 .is_display .text {
-	
+	width: 100%;
 	display: inline-block;
 	vertical-align: top;
 	direction: rtl;
+	padding-right:10px;
 	margin: 20px 0px 20px 0px;
-	padding-top: 8px;
-	background-color: #CACACA;
-	padding: 10px;
-	border-radius: 20px;
+	background-color: #ECEBFF;	
 }
 .model{
 	color: #222;
@@ -53,7 +46,6 @@
 
 }
 .is_display .text > div {
-	border-bottom: 1px dashed #eee;
 	display: inline-block;
 	margin-left: 20px;
 }
@@ -62,23 +54,19 @@
 	display: inline-block;
 	margin-left: 10px;
 }
-.is_display .text > form {
-
-}
 .is_display .text > form select {
 	width: 80px;
 	margin-left: 10px;
 }
 .is_display .desc {
 	display: inline-block;
-	border-radius: 5px;
 	background-color: #f8f8f8;
 	padding: 5px 20px 15px 20px;
 	font-size: 15px;
 	line-height: 22px !important;
 	margin-top: 10px;
-	margin-right: 10px;
-	width: 38%;
+	margin-right: 20px;
+	width: 39%;
 	min-height: 300px;
 	vertical-align: top;
 }
@@ -92,18 +80,14 @@
 	word-break:break-all;
 }
 .orders_basket_addbutton {
-
 	width: 100% !important;
 	padding: 8px 15px 5px 15px !important;
 	background-color: #A90000 !important;
 	display: inline-block !important;
-	position: relative !important;
-	
+	position: relative !important;	
 }
 .orders_basket_addbutton:hover {
 	opacity: 0.8 !important;
-}
-.sabad-send{
 }
 
 

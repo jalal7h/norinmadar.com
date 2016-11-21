@@ -1,14 +1,18 @@
 <?
 
 function news_management_form(){
+
 	if(!$id = $_REQUEST['id']){
 		;//
+
 	} else if(!$tnews = table("news",$id)){
 		echo "err - ".__LINE__;
 	}
+
 	?>
+	
 	<div id="news_management_form">
-	<form method=post enctype="multipart/form-data" action="./?page=admin&cp=<?=$_REQUEST['cp']?>&func=news_management_list&do=<?=($tnews?'saveEdit&id='.$id:'saveNew')?>">
+		<form method=post enctype="multipart/form-data" action="./?page=admin&cp=<?=$_REQUEST['cp']?>&func=news_management_list&do=<?=($tnews?'saveEdit&id='.$id:'saveNew')?>">
 	<?
 	
 	$GLOBALS['formName'] = "newsForm";

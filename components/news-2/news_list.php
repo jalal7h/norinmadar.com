@@ -3,21 +3,29 @@
 $GLOBALS['block_layers']['news_list'] = 'لیست خطی خبر ها';
 
 function news_list( $table_name=null , $page_id=null ){
+
 	$content.= "<div class='news_list'>";
 	$tdd = 10;
 	$stt = $tdd * intval($_REQUEST['p']);
+
 	if($q = $_REQUEST['q']){
 		$q_query = " AND (`name` LIKE '%$q%' OR `text` LIKE '%$q%' OR `tag` LIKE '%$q%') ";
 	}
+
 	$query = " SELECT * FROM `news` WHERE 1 $q_query ORDER BY `date` DESC LIMIT $stt , $tdd ";
+
 	if(!$rs = dbq($query)){
 		$content.= dbe();
+
 	} else if(!dbn($rs)){
 		$content.= "</div>";
 		return false;
+
 	} else while($rw = dbf($rs)){
 		$content.= news_list_this($rw);
+	
 	}
+	
 	$link = "./?page=".$_REQUEST['page']."&p=";
 	$content.= listmaker_paging($query, $link, $tdd);
 	$content.= "</div>";
@@ -25,9 +33,11 @@ function news_list( $table_name=null , $page_id=null ){
 	if($page_id){
 		$title = table( $table_name , $page_id , "_title" , "_id" );
 		create_box( $title , $content, $allow_eval=false, $framed=true, $position="center");
+	
 	} else {
 		echo $content;
 	}
+	
 	return true;
 }
 
@@ -48,6 +58,7 @@ function news_list_this( $rw ){
 			$tag = "کلمات کلیدی: ".implode(" , ", $tag_arr);
 		}
 		$path = "data/news/".$rw['id'];
+	
 		if(!$list = fileupload_filelist($path)){
 			$list[0] = 'image.list/174240.png';
 		}

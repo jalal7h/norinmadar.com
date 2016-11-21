@@ -15,14 +15,12 @@ function is_display(){
 		e(__FUNCTION__.__LINE__);
 	
 	} else {
-		$title = $rw['name'];
-		
+		$title = $rw['name'];		
 		$path = "data/autoparts/".$rw['id'];
 		if(! $list = fileupload_filelist($path) ){
 			$list[0] = 'image.list/is-no-pic.png';
 		}
 		
-
 		$c.= "
 		<div class='is_display'>
 		

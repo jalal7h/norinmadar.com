@@ -7,7 +7,7 @@
 function is_management_form(){
 	
 	if(!$id = $_REQUEST['id']){
-		// its new
+	// its new
 	} else if(!$rw = table("irtoya_staff", $id)){
 		e(__FUNCTION__.__LINE__);
 	}
@@ -18,7 +18,6 @@ function is_management_form(){
 		fm(array('name'=>'is_management_form' , 'class'=>'is_management_form' , 'method'=>'post' , 'action'=>'?page=admin&cp='.$_REQUEST['cp'].'&func='.$_REQUEST['cp'].'_list','save_switch'=>'do'));
 
 	echo 
-		
 		ff(array("نام محصول",'n:name'=>$rw,'inDiv')).
 		
 		ff(array("کدمحصول",'n:code'=>$rw,'inDiv')).
@@ -31,9 +30,8 @@ function is_management_form(){
 		
 		ff(array("قیمت",'n:price'=>$rw,'inDiv')).
 		
-		ff(array("توضیحات",'t:textarea','n:desc'=>$rw,'inDiv')).
-		
-
+		ff(array("توضیحات",'t:textarea','n:desc'=>$rw,'inDiv')).	
+	//pic
 		ff(array('عکس','n:autoparts[]'=>'','accept'=>'image/*','inDiv')).
 		ff('br').
 		ff('br').

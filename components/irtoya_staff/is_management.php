@@ -7,6 +7,7 @@
 $GLOBALS['cmp']['is_management'] = 'مدیریت محصولات';
 
 function is_management(){
+	
 	$url = "./?page=admin&cp=".$_REQUEST['cp'];
 	$menu = array(
 		$_REQUEST['cp']."_list" => "لیست محصولات",
@@ -14,10 +15,10 @@ function is_management(){
 		$_REQUEST['cp']."_import_form" => "محصول اکسل",
 		"cat_management&l=main" => "دسته بندی",
 	);
+	
 	listmaker_tabmenu($menu,$url);
+
 }
-
-
 
 $GLOBALS['irtoya_staff_order_of_columns'] = array(
 	'name',
