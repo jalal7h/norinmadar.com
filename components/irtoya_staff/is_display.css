@@ -15,7 +15,9 @@
 .is_display .pics img.main {
 	vertical-align: top;
 	width: 100%;
-	min-height: 300px;
+	min-width: 100%;
+	min-height: 400px;
+	border:1px solid red;
 	max-height: 400px;
 }
 .is_display .pics .tiny img {
