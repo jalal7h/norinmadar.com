@@ -73,6 +73,6 @@ function is_list_this( $rw ){
 function is_linkk( $rw ){
 	return _URL."/product-".$rw["id"]."-".name_for_link($rw["name"])."-cat_id-".$rw["cat"].".html";
 }
-
-
+ 
+ 
 

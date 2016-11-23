@@ -26,7 +26,6 @@ function is_display(){
 		
 			".( $rw['desc'] ? "
 			<div class='desc'>
-				
 				<div>".lmtc("irtoya_staff:desc")." : </div>
 				<p class='p-dec'>".$rw['desc']."</p>
 			
