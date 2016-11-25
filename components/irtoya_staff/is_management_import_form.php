@@ -23,7 +23,7 @@ function is_management_import_form(){
 	fm(array('name'=>'is_management_import_form' , 'class'=>'is_management_import_form' , 'method'=>'post' , 'action'=>'?page=admin&cp='.$_REQUEST['cp'].'&func='.$_REQUEST['func'],'save_switch'=>'do_import')).
 	"<div class='text'>فایل اکسل خود را ضمیمه فرم کنید :‌ </div>".
 	ff(array('انتخاب فایل اکسل','n:irtoya_staff[]'=>'','accept'=>'*','inDiv')).
-	ff(array('t:submit','n:submit'=>'آپلود و ثبت قطعات' , 'class'=>'submit_button', 'inDiv'));
+	ff(array('t:submit','n:submit'=>'آپلود و ثبت محصولات' , 'class'=>'submit_button', 'inDiv'));
 	fm( 'close' );
 
 	echo "<br><br>
